@@ -1,3 +1,3 @@
 # Proiect-web
-Mistreanu Emanuela
-Vlad Adriana
+# Mistreanu Emanuela
+# Vlad Adriana
