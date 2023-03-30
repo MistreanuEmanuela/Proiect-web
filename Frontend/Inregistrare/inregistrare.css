@@ -1,11 +1,12 @@
 body{
-    background-color: #88c082;
-    min-height: 70em;
+    background-image:url('https://images.pexels.com/photos/1470171/pexels-photo-1470171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     display: flex;
     justify-content: center;
     align-items:center;
+    background-size:cover;
 }
 form{
+    margin-top:10em;
     background-color:#d6d2bb;
     border-radius:5em;
     height: 42em;
