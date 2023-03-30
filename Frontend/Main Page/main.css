@@ -1,6 +1,7 @@
 body{
-    background-color: #88c082;
+    background-image:url('https://images.pexels.com/photos/1470171/pexels-photo-1470171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     font-family: 'Lucida Grande',monospace;
+    background-size:cover;
 }
 header{
     color: #3c503a;
@@ -19,6 +20,7 @@ form{
     display: flex;
     flex-direction: row;
     margin-right:4em;
+    opacity:90%;
 }
 ::placeholder{
     color: #3c503a;
@@ -110,4 +112,5 @@ hr{
     font-family: 'Lucida Grande',monospace;
     font-weight: bold;
     color: #473f34;
+    opacity:90%;
 }
