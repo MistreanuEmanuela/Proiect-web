@@ -25,8 +25,8 @@ form{
     font-family: 'Lucida Grande',monospace;
 }
 input{
-    font-size:1.5em;
-    width:18em;
+    font-size:2.25em;
+    width:15em;
     border-radius: 0.5em;
     border: 0.15em solid #386433;
     background-color: #5ba353;
@@ -37,7 +37,7 @@ input{
 form button{
     font-size:1.5em;
     height: inherit;
-    width:1.75em;
+    width:2.25em;
     border-radius: 0.5em;
     border: 0.15em solid #386433;
     background-image: url('https://www.citypng.com/public/uploads/small/11640084021s7j4kii6hsgshmcxlovq7siag8vktv9rhqscjbbuyse2favmnjhrpjhrgqcug2nqdcpxsmovtjjonzon74knmk3kywi3tpxrpg8r.png');
@@ -50,7 +50,7 @@ form button{
 form button:hover{
     font-size:1.5em;
     height:inherit;
-    width:1.75em;
+    width:2.25em;
     border-radius: 0.5em;
     border: 0.15em solid #55964e;
     background-color: #88c082;
