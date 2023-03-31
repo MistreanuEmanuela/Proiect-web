@@ -6,7 +6,7 @@ body{
 header{
     color: #3c503a;
     font-weight: bold;
-    font-size:4em;
+    font-size:2.5em;
     margin-left:2em;
     margin-top:-1em;
     margin-bottom:-1em;
@@ -16,7 +16,7 @@ header{
 .search{
     color: #3c503a;
     float:right;
-    margin-top:7em;
+    margin-top:3em;
     display: flex;
     flex-direction: row;
     margin-right:4em;
@@ -65,10 +65,10 @@ header{
     float:left;
     clear: left;
     font-size:2em;
-    height:10em;
-    width:10em;
+    min-height:30%;
+    min-width:20%;
     margin-top:3em;
-    margin-left:0em;
+    margin-left:-2%;
     border: 0.15em solid #386433;
     background-color: #5ba353;
     border-radius: 0.5em;
@@ -85,13 +85,14 @@ header{
     height:2.25em;
     background-color: #5ba353;
     border:none;
+    background-size: cover;
     border-radius: 0.5em;
 }
-.tabs button:hover{
+.tabs button:Hover{
     box-sizing: border-box;
     background-color: #88c082;
     font-size:1em;
-    height:2.25em;
+    min-height:2.5em;
     flex:1;
     border-radius: 0.5em;
     border:none;
@@ -100,23 +101,27 @@ hr{
     margin:0em;
     border: 0.10em solid #386433;
 }
-.page{
-    border: 0.15em solid #918e7c;
+
+.page
+{ 
+    font-family: 'Lucida Grande',monospace;
+    opacity:90%;
+    border-radius:15%;
     background-color: #e9e6d4;;
     text-align: center;
     float:left;
-    margin-left:1em;
+    margin-left:0.75em;
+    margin-top:0.75em;
     font-size:3em;
-    height:14em;
+    min-height:12em;
     width:78%;
     font-family: 'Lucida Grande',monospace;
     font-weight: bold;
     color: #473f34;
-    opacity:90%;
-    display:flex;
-    justify-content:center;
+    
 }
 .add{
+    margin: 0 auto;
     border-radius: 0.5em;
     border: 0.15em solid #918e7c;
     background-color: #e9e6d4;
@@ -152,8 +157,8 @@ hr{
 }
 .add button:hover{
     font-size:0.5em;
-    border: 0.15em solid #9b9888;
-    background-color: #eeede5;;
+    border: 0.15em solid #386433;
+    background-color: #5ba353;
     font-family: 'Lucida Grande',monospace;
     font-weight: bold;
     color: #473f34;
