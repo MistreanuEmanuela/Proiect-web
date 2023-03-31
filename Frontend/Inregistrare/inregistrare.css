@@ -6,11 +6,16 @@ body{
     background-size:cover;
 }
 form{
-    margin-top:10em;
+    margin-top:20vh;
     background-color:#d6d2bb;
     border-radius:5em;
-    height: 42em;
-    width: 25em;
+    height: 70vh;
+    width: 22vw;
+    min-width:20em;
+    min-height:42em;
+    margin-left:auto 0;
+    margin-right:auto 0;
+    text-align: center;
 }
 label{
     font-size:1.5em;
@@ -28,32 +33,31 @@ input{
     float: left;
     clear: left;
     margin-left:2.5em;
-    width:14em;
+    width:16vw;
+    min-width:10em;
     border-radius: 0.5em;
     border: 0.15em solid #918e7c;
     background-color: #e9e6d4;
 }
 button{
     font-size:1.5em;
-    float: left;
-    clear: left;
+    float: center;
+    clear: both;
     border: 0.15em solid #918e7c;
     background-color: #e9e6d4;
     font-family: 'Lucida Grande',monospace;
     font-weight: bold;
     color: #473f34;
-    margin-left:6em;
     margin-top:1em;
 }
 button:hover{
     font-size:1.5em;
-    float: left;
-    clear: left;
+    float: center;
+    clear: both;
     border: 0.15em solid #386433;
     background-color: #5ba353;
     font-family: 'Lucida Grande',monospace;
     font-weight: bold;
     color: #473f34;
-    margin-left:6em;
     margin-top:1em;
 }
