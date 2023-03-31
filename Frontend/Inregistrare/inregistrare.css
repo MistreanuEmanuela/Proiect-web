@@ -31,14 +31,14 @@ input{
     width:14em;
     border-radius: 0.5em;
     border: 0.15em solid #918e7c;
-    background-color: #e9e6d4;;
+    background-color: #e9e6d4;
 }
 button{
     font-size:1.5em;
     float: left;
     clear: left;
     border: 0.15em solid #918e7c;
-    background-color: #e9e6d4;;
+    background-color: #e9e6d4;
     font-family: 'Lucida Grande',monospace;
     font-weight: bold;
     color: #473f34;
@@ -49,8 +49,8 @@ button:hover{
     font-size:1.5em;
     float: left;
     clear: left;
-    border: 0.15em solid #9b9888;
-    background-color: #eeede5;;
+    border: 0.15em solid #386433;
+    background-color: #5ba353;
     font-family: 'Lucida Grande',monospace;
     font-weight: bold;
     color: #473f34;
