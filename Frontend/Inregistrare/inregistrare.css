@@ -6,11 +6,11 @@ body{
     background-size:cover;
 }
 form{
-    margin-top:20vh;
+    margin-top:10vh;
     background-color:#d6d2bb;
     border-radius:5em;
     height: 70vh;
-    width: 22vw;
+    width: 23vw;
     min-width:20em;
     min-height:42em;
     margin-left:auto 0;
@@ -30,9 +30,8 @@ label{
 }
 input{
     font-size:1.25em;
-    float: left;
+    float: center;
     clear: left;
-    margin-left:2.5em;
     width:16vw;
     min-width:10em;
     border-radius: 0.5em;
