@@ -13,8 +13,8 @@ form{
     width: 23vw;
     min-width:20em;
     min-height:42em;
-    margin-left:auto 0;
-    margin-right:auto 0;
+    margin-left:0;
+    margin-right:0;
     text-align: center;
 }
 label{
@@ -30,8 +30,6 @@ label{
 }
 input{
     font-size:1.25em;
-    float: center;
-    clear: left;
     width:16vw;
     min-width:10em;
     border-radius: 0.5em;
@@ -40,8 +38,6 @@ input{
 }
 button{
     font-size:1.5em;
-    float: center;
-    clear: both;
     border: 0.15em solid #918e7c;
     background-color: #e9e6d4;
     font-family: 'Lucida Grande',monospace;
@@ -50,13 +46,6 @@ button{
     margin-top:1em;
 }
 button:hover{
-    font-size:1.5em;
-    float: center;
-    clear: both;
     border: 0.15em solid #386433;
     background-color: #5ba353;
-    font-family: 'Lucida Grande',monospace;
-    font-weight: bold;
-    color: #473f34;
-    margin-top:1em;
 }
