@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help</title>
+    <link rel="stylesheet" href="help.css">
+</head>
+<body>
+    <div class="container"> 
+     <button> Main page </button>
+     <button onclick="window.location.href ='file:///C:/Users/My%20Pc/Desktop/web/proiect/About.html';" > About</button>
+     </div>
+     <div class="titlu">Ajutor si suport  HeMa
+     </div>
+     <div class="container2"> Cu ce te putem ajuta astazi? </div>
+     <button class="accordion">
+        <span class="title">Ai probleme cu conectarea? </span> </button>
+    <div class="accordion__panel">
+            <p class="accordion__panel--titlu"> 1. Inregistreaza-te </p>
+        <p class="accordion__panel--text"> Pentru a putea folosi platforma noastra trebuie sa te inregistrezi, tot ce trebuie sa faci este sa apesi butonul de inregistrare de pe pagina principala</p>
+        <img src="sign.png" alt="sign_image">
+        <p class="accordion__panel--titlu">2.Conectare </p>
+        <p class="accordion__panel--text"> In cazul in care ti-ai facut un cont in trecut tot ce trebuie sa faci este sa iti introduci date in caseta de pe pagina principala (vezi imaginea), iar in cazul in care ai uitat datele, anunta-ne prin e-mail la Hema@gmail.com </p>
+        <img src="sign1.png" alt="sing_imagine2">
+    </div>
+     <button class="accordion">
+        <span class="title">Vrei sa iti vizualizezi colectiile de plante? </span> </button>
+    <div class="accordion__panel">
+            <p class="accordion__panel--titlu">1.Butonul de menu "Collection" din stanga </p>
+        <p class="accordion__panel--text"> De aici poti accesa pagina de vizualizare colectii</p>
+        <img src="collection.png" alt="colectie">
+        <p class="accordion__panel--titlu">2.Apasa pe imaginea unei colectii</p>
+        <p class="accordion__panel--text"> De aici poti accesa o colectie anume pe care vrei sa o vizualizezi</p>
+        <img src="col2.png" alt="colectie3">
+        </div>
+        <button class="accordion">
+            <span class="title">Vrei sa vizualizezi o planta anume? </span> </button>
+        <div class="accordion__panel">
+                <p class="accordion__panel--titlu">1.Apasa pe imaginea unei plante</p>
+            <p class="accordion__panel--text"> De aici poti accesa pagina unei plante cu detaliile despre aceasta</p>
+            <img src="plante1.png" alt="plante">
+     </div>
+     <button class="accordion">
+        <span class="title">Vrei sa creezi o noua colectie? </span> </button>
+    <div class="accordion__panel">
+            <p class="accordion__panel--titlu">Butonul din josul paginii</p>
+        <p class="accordion__panel--text"> Apasa pe butonul din josul paginii iar apoi adauga datele necesare despre aceasta</p>
+        <img src="col22.png" alt="colectie3">
+ </div>
+ <button class="accordion">
+    <span class="title">Vrei sa adaugi o noua planta? </span> </button>
+<div class="accordion__panel">
+        <p class="accordion__panel--titlu">Butonul din josul paginii</p>
+    <p class="accordion__panel--text"> Apasa pe butonul din josul paginii iar apoi adauga datele necesare despre aceasta</p>
+    <img src="plante2.2.png" alt="plante2">
+</div>
+   
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+    
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
