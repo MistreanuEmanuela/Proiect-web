@@ -74,7 +74,7 @@ header{
     justify-content:space-evenly;
     flex-direction: column;
 }
-.tabs a{
+.tabs a:not(.rankings){
     padding-top:3vh;
     text-decoration: none;
     box-sizing: border-box;
@@ -84,6 +84,19 @@ header{
     font-size:1em;
     height:10vh;
     background-color: #5ba353;
+    border:none;
+    border-radius: 0.5em;
+}
+.rankings{
+    padding-top:3vh;
+    text-decoration: none;
+    box-sizing: border-box;
+    display:block;
+    color: #3c503a;
+    font-weight: bold;
+    font-size:1em;
+    height:10vh;
+    background-color: #88c082;
     border:none;
     border-radius: 0.5em;
 }
