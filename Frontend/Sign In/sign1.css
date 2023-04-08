@@ -1,0 +1,1174 @@
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+    body {
+        background-color: #88c082;
+        text-align: left;
+        background-image:url('https://images.pexels.com/photos/1470171/pexels-photo-1470171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+        background-size: cover;
+    }
+    .descBox
+        {
+            background-color: hsla(0, 50%, 22%, 0);
+            width: 40%;
+            font-size: 3em;
+            color:rgba(0, 0, 0, 0.632);
+            font-family: 'Lucida Grande',monospace;
+            font-weight: bold;
+            text-align: center;
+            height: 30vb;
+            margin-left:10%;
+            margin-top: 2%;
+            
+        }  
+        .imgBox1
+        {
+         background-color: hsla(0, 0%, 0%, 0);
+         align-self: center;
+         width: 15%;
+         font-size: 100%;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         height: 35vb;
+         margin-left:2%;
+         margin-top: 3%;
+         position: absolute;
+        }
+        .imgBox2
+        {
+         background-color: hsla(0, 0%, 0%, 0);
+         align-self: center;
+         width: 15%;
+         font-size: 100%;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         height: 35vb;
+         margin-left:20%;
+         margin-top: 3%;
+         position: absolute;
+        }
+        .imgBox3
+        {
+         background-color: hsla(0, 0%, 0%, 0);
+         align-self: center;
+         width: 15%;
+         font-size: 100%;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         height: 35vb;
+         margin-left:38%;
+         margin-top: 3%;
+         position: absolute;
+        }
+        .form
+ {
+    float:left;
+    background-color:#d0b9a274;;
+    width: 30%;
+    border-radius: 15%;
+    border: black;
+    outline: black;
+    display: flex;
+    flex-direction: column;
+    height: 88vb;
+    margin-left:60%;
+    margin-top: -18%;
+    position: absolute;
+ }   
+ .textBox
+ {
+        align-self: center;
+        width: 80%;
+        border-radius: 20%;
+        border: black;
+        outline: black;
+        font-size: 3em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 15vb;
+        margin: 10%;
+        font-family: 'Lucida Grande',monospace;
+        font-weight: bold;
+        margin-top: 20%;
+        position: relative;
+ }
+ .textBox2
+ {
+        align-self: center;
+        width: 100%;
+        border-radius: 20%;
+        border: black;
+        outline: black;
+        font-size: 1em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 2vb;
+        margin: 10%;
+        font-family: 'Lucida Grande',monospace;
+        font-weight: bold;
+        margin-top: 10%;
+        position: relative;
+ }
+ label[for="uname"], label[for="psw"]{
+    font-family: 'Lucida Grande',monospace;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: left;
+    margin-left: 10%;
+ }
+ input[type=text], input[type=password] {
+    width: 80%;
+    height: 5%;
+    color: rgb(0, 104, 54);
+    margin: 10%;
+    display: inline-flex;
+    font-family: 'Lucida Grande',monospace;
+    font-weight: bold;
+    margin-top: 3%;
+    box-sizing: border-box;
+    border: 0.15em solid #918e7c;
+    background-color: #e9e6d4;
+  }
+  button[type=submit], .form button[type=button]
+  {
+        font-family: 'Lucida Grande',monospace;
+        font-weight: bold;
+        margin-left: 35%;
+        width: 30%;
+        border: 0.15em solid #918e7c;
+        background-color: #e9e6d4;
+        color: #473f34;
+}
+button[type=button]
+{
+    width: 10em;
+    height: 2em;
+    margin-left: 103em;
+    margin-top: 0.3em;
+    font-family: 'Lucida Grande',monospace;
+    font-weight: bold;
+    box-sizing: border-box;
+    box-decoration-break: clone;
+    border: 0.15em solid #918e7c;
+    background-color: #e9e6d4;
+    color: #473f34;
+    position: relative;
+    padding: 0.5em;
+    transition-duration: 0.4s;
+}
+.textBox3
+{
+    background-color: black;
+    align-self: center;
+    width: 100%;
+    border-radius: 20%;
+    border: black;
+    outline: black;
+    font-size: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 2vb;
+    font-family: 'Lucida Grande',monospace;
+    font-weight: bold;
+    
+    position: absolute;
+}
+  button[type=submit]:hover {
+    background-color: #3278369a; /* Green */
+  }
+  button[type=button]:hover {
+    background-color: #3278369a; /* Green */
+  }
+  button[type=menu]:hover {
+    background-color: #3278369a; /* Green */
+  }
+  }
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+    body {
+        background-color: #88c082;
+        text-align: left;
+        background-image: url('p.jpg');
+        background-size: cover;
+    }
+    .descBox
+        {
+            background-color: hsla(0, 50%, 22%, 0);
+            width: 40%;
+            font-size: 3em;
+            color:rgba(0, 0, 0, 0.632);
+            font-family: 'Lucida Grande',monospace;
+            font-weight: bold;
+            text-align: center;
+            height: 30vb;
+            margin-left:10%;
+            margin-top: 2%;
+        
+        }  
+        .imgBox1
+        {
+         background-color: hsla(0, 0%, 0%, 0);
+         align-self: center;
+         width: 15%;
+         font-size: 100%;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         height: 35vb;
+         margin-left:2%;
+         margin-top: 3%;
+         position: absolute;
+        }
+        .imgBox2
+        {
+         background-color: hsla(0, 0%, 0%, 0);
+         align-self: center;
+         width: 15%;
+         font-size: 100%;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         height: 35vb;
+         margin-left:20%;
+         margin-top: 3%;
+         position: absolute;
+        }
+        .imgBox3
+        {
+         background-color: hsla(0, 0%, 0%, 0);
+         align-self: center;
+         width: 15%;
+         font-size: 100%;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         height: 35vb;
+         margin-left:38%;
+         margin-top: 3%;
+         position: absolute;
+        }
+        .form
+ {
+    float:left;
+    background-color:#d0b9a274;;
+    width: 30%;
+    border-radius: 15%;
+    border: black;
+    outline: black;
+    display: flex;
+    flex-direction: column;
+    height: 88vb;
+    margin-left:60%;
+    margin-top: -18%;
+    position: absolute;
+ }   
+ .textBox
+ {
+        align-self: center;
+        width: 80%;
+        border-radius: 20%;
+        border: black;
+        outline: black;
+        font-size: 3em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 15vb;
+        margin: 10%;
+        font-family: 'Lucida Grande',monospace;
+        font-weight: bold;
+        margin-top: 20%;
+        position: relative;
+ }
+ .textBox2
+ {
+        align-self: center;
+        width: 100%;
+        border-radius: 20%;
+        border: black;
+        outline: black;
+        font-size: 1em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 2vb;
+        margin: 10%;
+        font-family: 'Lucida Grande',monospace;
+        font-weight: bold;
+        margin-top: 10%;
+        position: relative;
+ }
+ label[for="uname"], label[for="psw"]{
+    font-family: 'Lucida Grande',monospace;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: left;
+    margin-left: 10%;
+ }
+ input[type=text], input[type=password] {
+    width: 80%;
+    height: 5%;
+    color: rgb(0, 104, 54);
+    margin: 10%;
+    display: inline-flex;
+    font-family: 'Lucida Grande',monospace;
+    font-weight: bold;
+    margin-top: 3%;
+    box-sizing: border-box;
+    border: 0.15em solid #918e7c;
+    background-color: #e9e6d4;
+  }
+  button[type=submit], .form button[type=button]
+  {
+        font-family: 'Lucida Grande',monospace;
+        font-weight: bold;
+        margin-left: 35%;
+        width: 30%;
+        border: 0.15em solid #918e7c;
+        background-color: #e9e6d4;
+        color: #473f34;
+}
+button[type=button]
+{
+    width: 10em;
+    height: 2em;
+    margin-left: 103em;
+    margin-top: 0.3em;
+    font-family: 'Lucida Grande',monospace;
+    font-weight: bold;
+    box-sizing: border-box;
+    box-decoration-break: clone;
+    border: 0.15em solid #918e7c;
+    background-color: #e9e6d4;
+    color: #473f34;
+    position: relative;
+    padding: 0.5em;
+    transition-duration: 0.4s;
+}
+.textBox3
+{
+    background-color: black;
+    align-self: center;
+    width: 100%;
+    border-radius: 20%;
+    border: black;
+    outline: black;
+    font-size: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 2vb;
+    font-family: 'Lucida Grande',monospace;
+    font-weight: bold;
+    
+    position: absolute;
+}
+  button[type=submit]:hover {
+    background-color: #3278369a; /* Green */
+  }
+  button[type=button]:hover {
+    background-color: #3278369a; /* Green */
+  }
+  button[type=menu]:hover {
+    background-color: #3278369a; /* Green */
+  }
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        background-color: #88c082;
+        text-align: left;
+        background-image: url('p.jpg');
+        background-size: cover;
+    }
+    .descBox
+        {
+            background-color: hsla(0, 50%, 22%, 0);
+            width: 40%;
+            font-size: 3em;
+            color:rgba(0, 0, 0, 0.632);
+            font-family: 'Lucida Grande',monospace;
+            font-weight: bold;
+            text-align: center;
+            height: 30vb;
+            margin-left:10%;
+            margin-top: 2%;
+           
+        }  
+        .imgBox1
+        {
+         background-color: hsla(0, 0%, 0%, 0);
+         align-self: center;
+         width: 15%;
+         font-size: 100%;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         height: 35vb;
+         margin-left:2%;
+         margin-top: 3%;
+         position: absolute;
+        }
+        .imgBox2
+        {
+         background-color: hsla(0, 0%, 0%, 0);
+         align-self: center;
+         width: 15%;
+         font-size: 100%;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         height: 35vb;
+         margin-left:20%;
+         margin-top: 3%;
+         position: absolute;
+        }
+        .imgBox3
+        {
+         background-color: hsla(0, 0%, 0%, 0);
+         align-self: center;
+         width: 15%;
+         font-size: 100%;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         height: 35vb;
+         margin-left:38%;
+         margin-top: 3%;
+         position: absolute;
+        }
+        .form
+ {
+  float:left;
+    background-color:#d0b9a274;;
+    width: 30%;
+    border-radius: 15%;
+    border: black;
+    outline: black;
+    display: flex;
+    flex-direction: column;
+    height: 88vb;
+    margin-left:60%;
+    margin-top: -18%;
+    position: absolute;
+ }   
+ .textBox
+ {
+        align-self: center;
+        width: 80%;
+        border-radius: 20%;
+        border: black;
+        outline: black;
+        font-size: 3em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 15vb;
+        margin: 10%;
+        font-family: 'Lucida Grande',monospace;
+        font-weight: bold;
+        margin-top: 20%;
+        position: relative;
+ }
+ .textBox2
+ {
+        align-self: center;
+        width: 100%;
+        border-radius: 20%;
+        border: black;
+        outline: black;
+        font-size: 1em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 2vb;
+        margin: 10%;
+        font-family: 'Lucida Grande',monospace;
+        font-weight: bold;
+        margin-top: 10%;
+        position: relative;
+ }
+ label[for="uname"], label[for="psw"]{
+    font-family: 'Lucida Grande',monospace;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: left;
+    margin-left: 10%;
+ }
+ input[type=text], input[type=password] {
+    width: 80%;
+    height: 5%;
+    color: rgb(0, 104, 54);
+    margin: 10%;
+    display: inline-flex;
+    font-family: 'Lucida Grande',monospace;
+    font-weight: bold;
+    margin-top: 3%;
+    box-sizing: border-box;
+    border: 0.15em solid #918e7c;
+    background-color: #e9e6d4;
+  }
+  button[type=submit], .form button[type=button]
+  {
+        font-family: 'Lucida Grande',monospace;
+        font-weight: bold;
+        margin-left: 35%;
+        width: 30%;
+        border: 0.15em solid #918e7c;
+        background-color: #e9e6d4;
+        color: #473f34;
+}
+button[type=button]
+{
+    width: 20%;
+    height: 2em;
+    margin-left: 90%em;
+    margin-top: 0.3em;
+    font-family: 'Lucida Grande',monospace;
+    font-weight: bold;
+    box-sizing: border-box;
+    box-decoration-break: clone;
+    border: 0.15em solid #918e7c;
+    background-color: #e9e6d4;
+    color: #473f34;
+    position: relative;
+    padding: 0.5em;
+    transition-duration: 0.4s;
+}
+.textBox3
+{
+    background-color: black;
+    align-self: center;
+    width: 100%;
+    border-radius: 20%;
+    border: black;
+    outline: black;
+    font-size: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 2vb;
+    font-family: 'Lucida Grande',monospace;
+    font-weight: bold;
+    
+    position: absolute;
+}
+  button[type=submit]:hover {
+    background-color: #3278369a; /* Green */
+  }
+  button[type=button]:hover {
+    background-color: #3278369a; /* Green */
+  }
+  button[type=menu]:hover {
+    background-color: #3278369a; /* Green */
+  }
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    body {
+        background-color: #88c082;
+        text-align: left;
+        background-image: url('p.jpg');
+        background-size: cover;
+    }
+    .descBox
+        {
+            background-color: hsla(0, 50%, 22%, 0);
+            width: 40%;
+            font-size: 3em;
+            color:rgba(0, 0, 0, 0.632);
+            font-family: 'Lucida Grande',monospace;
+            font-weight: bold;
+            text-align: center;
+            height: 30vb;
+            margin-left:10%;
+            margin-top: 2%;
+          
+        }  
+        .imgBox1
+        {
+         background-color: hsla(0, 0%, 0%, 0);
+         align-self: center;
+         width: 15%;
+         font-size: 100%;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         height: 35vb;
+         margin-left:2%;
+         margin-top: 3%;
+         position: absolute;
+        }
+        .imgBox2
+        {
+         background-color: hsla(0, 0%, 0%, 0);
+         align-self: center;
+         width: 15%;
+         font-size: 100%;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         height: 35vb;
+         margin-left:20%;
+         margin-top: 3%;
+         position: absolute;
+        }
+        .imgBox3
+        {
+         background-color: hsla(0, 0%, 0%, 0);
+         align-self: center;
+         width: 15%;
+         font-size: 100%;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         height: 35vb;
+         margin-left:38%;
+         margin-top: 3%;
+         position: absolute;
+        }
+        .form
+ {
+  float:left;
+    background-color:#d0b9a274;;
+    width: 30%;
+    border-radius: 15%;
+    border: black;
+    outline: black;
+    display: flex;
+    flex-direction: column;
+    height: 88vb;
+    margin-left:60%;
+    margin-top: -18%;
+    position: absolute;
+ }   
+ .textBox
+ {
+        align-self: center;
+        width: 80%;
+        border-radius: 20%;
+        border: black;
+        outline: black;
+        font-size: 3em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 15vb;
+        margin: 10%;
+        font-family: 'Lucida Grande',monospace;
+        font-weight: bold;
+        margin-top: 20%;
+        position: relative;
+ }
+ .textBox2
+ {
+        align-self: center;
+        width: 100%;
+        border-radius: 20%;
+        border: black;
+        outline: black;
+        font-size: 1em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 2vb;
+        margin: 10%;
+        font-family: 'Lucida Grande',monospace;
+        font-weight: bold;
+        margin-top: 10%;
+        position: relative;
+ }
+ label[for="uname"], label[for="psw"]{
+    font-family: 'Lucida Grande',monospace;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: left;
+    margin-left: 10%;
+ }
+ input[type=text], input[type=password] {
+    width: 80%;
+    height: 5%;
+    color: rgb(0, 104, 54);
+    margin: 10%;
+    display: inline-flex;
+    font-family: 'Lucida Grande',monospace;
+    font-weight: bold;
+    margin-top: 3%;
+    box-sizing: border-box;
+    border: 0.15em solid #918e7c;
+    background-color: #e9e6d4;
+  }
+  button[type=submit], .form button[type=button]
+  {
+        font-family: 'Lucida Grande',monospace;
+        font-weight: bold;
+        margin-left: 35%;
+        width: 30%;
+        border: 0.15em solid #918e7c;
+        background-color: #e9e6d4;
+        color: #473f34;
+}
+button[type=button]
+{
+    width: 10em;
+    height: 2em;
+    margin-left: 103em;
+    margin-top: 0.3em;
+    font-family: 'Lucida Grande',monospace;
+    font-weight: bold;
+    box-sizing: border-box;
+    box-decoration-break: clone;
+    border: 0.15em solid #918e7c;
+    background-color: #e9e6d4;
+    color: #473f34;
+    position: relative;
+    padding: 0.5em;
+    transition-duration: 0.4s;
+}
+.textBox3
+{
+    background-color: black;
+    align-self: center;
+    width: 100%;
+    border-radius: 20%;
+    border: black;
+    outline: black;
+    font-size: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 2vb;
+    font-family: 'Lucida Grande',monospace;
+    font-weight: bold;
+    
+    position: absolute;
+}
+  button[type=submit]:hover {
+    background-color: #3278369a; /* Green */
+  }
+  button[type=button]:hover {
+    background-color: #3278369a; /* Green */
+  }
+  button[type=menu]:hover {
+    background-color: #3278369a; /* Green */
+  }
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    
+    body {
+        background-color: #88c082;
+        text-align: left;
+        background-image: url('p.jpg');
+        background-size: cover;
+    }
+    .descBox
+        {
+            background-color: hsla(0, 50%, 22%, 0);
+            width: 40%;
+            font-size: 3em;
+            color:rgba(0, 0, 0, 0.632);
+            font-family: 'Lucida Grande',monospace;
+            font-weight: bold;
+            text-align: center;
+            height: 30vb;
+            margin-left:10%;
+            margin-top: 2%;
+       
+        }  
+        .imgBox1
+        {
+         background-color: hsla(0, 0%, 0%, 0);
+         align-self: center;
+         width: 15%;
+         font-size: 100%;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         height: 35vb;
+         margin-left:2%;
+         margin-top: 3%;
+         position: absolute;
+        }
+        .imgBox2
+        {
+         background-color: hsla(0, 0%, 0%, 0);
+         align-self: center;
+         width: 15%;
+         font-size: 100%;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         height: 35vb;
+         margin-left:20%;
+         margin-top: 3%;
+         position: absolute;
+        }
+        .imgBox3
+        {
+         background-color: hsla(0, 0%, 0%, 0);
+         align-self: center;
+         width: 15%;
+         font-size: 100%;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         height: 35vb;
+         margin-left:38%;
+         margin-top: 3%;
+         position: absolute;
+        }
+        .form
+ {
+    background-color:#d0b9a274;;
+    width: 30%;
+    border-radius: 15%;
+    border: black;
+    outline: black;
+    display: flex;
+    flex-direction: column;
+    height: 88vb;
+    margin-left:60%;
+    margin-top: -18%;
+    position: absolute;
+ }   
+ .textBox
+ {
+        align-self: center;
+        width: 80%;
+        border-radius: 20%;
+        border: black;
+        outline: black;
+        font-size: 3em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 15vb;
+        margin: 10%;
+        font-family: 'Lucida Grande',monospace;
+        font-weight: bold;
+        margin-top: 20%;
+        position: relative;
+ }
+ .textBox2
+ {
+        align-self: center;
+        width: 100%;
+        border-radius: 20%;
+        border: black;
+        outline: black;
+        font-size: 1em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 2vb;
+        margin: 10%;
+        font-family: 'Lucida Grande',monospace;
+        font-weight: bold;
+        margin-top: 10%;
+        position: relative;
+ }
+ label[for="uname"], label[for="psw"]{
+    font-family: 'Lucida Grande',monospace;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: left;
+    margin-left: 10%;
+ }
+ input[type=text], input[type=password] {
+    width: 80%;
+    height: 5%;
+    color: rgb(0, 104, 54);
+    margin: 10%;
+    display: inline-flex;
+    font-family: 'Lucida Grande',monospace;
+    font-weight: bold;
+    margin-top: 3%;
+    box-sizing: border-box;
+    border: 0.15em solid #918e7c;
+    background-color: #e9e6d4;
+  }
+  button[type=submit], .form button[type=button]
+  {
+        font-family: 'Lucida Grande',monospace;
+        font-weight: bold;
+        margin-left: 35%;
+        width: 30%;
+        border: 0.15em solid #918e7c;
+        background-color: #e9e6d4;
+        color: #473f34;
+}
+button[type=button]
+{
+    width: 10em;
+    height: 2em;
+    margin-left: 103em;
+    margin-top: 0.3em;
+    font-family: 'Lucida Grande',monospace;
+    font-weight: bold;
+    box-sizing: border-box;
+    box-decoration-break: clone;
+    border: 0.15em solid #918e7c;
+    background-color: #e9e6d4;
+    color: #473f34;
+    position: relative;
+    padding: 0.5em;
+    transition-duration: 0.4s;
+}
+.textBox3
+{
+    background-color: black;
+    align-self: center;
+    width: 100%;
+    border-radius: 20%;
+    border: black;
+    outline: black;
+    font-size: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 2vb;
+    font-family: 'Lucida Grande',monospace;
+    font-weight: bold;
+    
+    position: absolute;
+}
+  button[type=submit]:hover {
+    background-color: #3278369a; /* Green */
+  }
+  button[type=button]:hover {
+    background-color: #3278369a; /* Green */
+  }
+  button[type=menu]:hover {
+    background-color: #3278369a; /* Green */
+  }
+  }
+        
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    body {
+        background-color: #88c082;
+        text-align: left;
+        background-image: url('p.jpg');
+        background-size: cover;
+    }
+    .descBox
+        {
+            background-color: hsla(0, 50%, 22%, 0);
+            width: 40%;
+            font-size: 3em;
+            color:rgba(0, 0, 0, 0.632);
+            font-family: 'Lucida Grande',monospace;
+            font-weight: bold;
+            text-align: center;
+            height: 30vb;
+            margin-left:10%;
+            margin-top: 2%;
+          
+        }  
+        .imgBox1
+        {
+         background-color: hsla(0, 0%, 0%, 0);
+         align-self: center;
+         width: 15%;
+         font-size: 100%;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         height: 35vb;
+         margin-left:2%;
+         margin-top: 3%;
+         position: absolute;
+        }
+        .imgBox2
+        {
+         background-color: hsla(0, 0%, 0%, 0);
+         align-self: center;
+         width: 15%;
+         font-size: 100%;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         height: 35vb;
+         margin-left:20%;
+         margin-top: 3%;
+         position: absolute;
+        }
+        .imgBox3
+        {
+         background-color: hsla(0, 0%, 0%, 0);
+         align-self: center;
+         width: 15%;
+         font-size: 100%;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         height: 35vb;
+         margin-left:38%;
+         margin-top: 3%;
+         position: absolute;
+        }
+        .form
+ {
+    background-color:#d0b9a274;;
+    width: 30%;
+    border-radius: 15%;
+    border: black;
+    outline: black;
+    display: flex;
+    flex-direction: column;
+    height: 88vb;
+    margin-left:60%;
+    margin-top: -18%;
+    position: absolute;
+ }   
+ .textBox
+ {
+        align-self: center;
+        width: 80%;
+        border-radius: 20%;
+        border: black;
+        outline: black;
+        font-size: 3em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 15vb;
+        margin: 10%;
+        font-family: 'Lucida Grande',monospace;
+        font-weight: bold;
+        margin-top: 20%;
+        position: relative;
+ }
+ .textBox2
+ {
+        align-self: center;
+        width: 100%;
+        border-radius: 20%;
+        border: black;
+        outline: black;
+        font-size: 1em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 2vb;
+        margin: 10%;
+        font-family: 'Lucida Grande',monospace;
+        font-weight: bold;
+        margin-top: 10%;
+        position: relative;
+ }
+ label[for="uname"], label[for="psw"]{
+    font-family: 'Lucida Grande',monospace;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: left;
+    margin-left: 10%;
+ }
+ input[type=text], input[type=password] {
+    width: 80%;
+    height: 5%;
+    color: rgb(0, 104, 54);
+    margin: 10%;
+    display: inline-flex;
+    font-family: 'Lucida Grande',monospace;
+    font-weight: bold;
+    margin-top: 3%;
+    box-sizing: border-box;
+    border: 0.15em solid #918e7c;
+    background-color: #e9e6d4;
+  }
+  button[type=submit], .form button[type=button]
+  {
+        font-family: 'Lucida Grande',monospace;
+        font-weight: bold;
+        margin-left: 35%;
+        width: 30%;
+        border: 0.15em solid #918e7c;
+        background-color: #e9e6d4;
+        color: #473f34;
+}
+button[type=button]
+{
+    width: 10em;
+    height: 2em;
+    margin-left: 103em;
+    margin-top: 0.3em;
+    font-family: 'Lucida Grande',monospace;
+    font-weight: bold;
+    box-sizing: border-box;
+    box-decoration-break: clone; 
+    border: 0.15em solid #918e7c;
+    background-color: #e9e6d4;
+    color: #473f34;
+    position: relative;
+    padding: 0.5em;
+    transition-duration: 0.4s;
+}
+.textBox3
+{
+    background-color: black;
+    align-self: center;
+    width: 100%;
+    border-radius: 20%;
+    border: black;
+    outline: black;
+    font-size: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 2vb;
+    font-family: 'Lucida Grande',monospace;
+    font-weight: bold;
+    
+    position: absolute;
+}
+  button[type=submit]:hover {
+    background-color: #3278369a; /* Green */
+  }
+  button[type=button]:hover {
+    background-color: #3278369a; /* Green */
+  }
+  button[type=menu]:hover {
+    background-color: #3278369a; /* Green */
+  }
+  }
+  
