@@ -7,17 +7,15 @@ body{
 header{
     color: #3c503a;
     font-weight: bold;
-    font-size:2.5em;
-    margin-left:2em;
-    margin-top:-1em;
-    margin-bottom:-1em;
-    float:left;
+    font-size:3.5em;
+    margin-left:2%;
+    margin-top:-1%;
     top:-1em;
 }
 form{
     color: #3c503a;
     float:right;
-    margin-top:5vh;
+    margin-top:-10%;
     display: flex;
     flex-direction: row;
     margin-right:5vw;
@@ -28,7 +26,7 @@ form{
     font-family: 'Lucida Grande',monospace;
 }
 input{
-    font-size:2.25em;
+    font-size:3em;
     width:30vw;
     border-radius: 0.5em;
     border: 0.15em solid #386433;
@@ -38,7 +36,7 @@ input{
     border-right:none;
 }
 form button{
-    font-size:1.5em;
+    font-size:2em;
     height: inherit;
     aspect-ratio: 7 / 1 ;
     border-radius: 0.5em;
@@ -56,16 +54,12 @@ form button:hover{
 }
 .tabs{
     box-sizing: border-box;
-    display:block;
     float:left;
     clear: left;
-    font-size:2em;
-    text-align:center;
-    min-height:30vh;
-    min-width:20vw;
-    margin:0;
-    padding:0;
-    margin-top:13vh;
+    font-size:2.4em;
+    height:13em;
+    margin-top: 12vh;
+    width:10em;
     margin-left:-2vw;
     border: 0.15em solid #386433;
     background-color: #5ba353;
@@ -74,20 +68,19 @@ form button:hover{
     justify-content:space-evenly;
     flex-direction: column;
 }
-.tabs a{
-    padding-top:3vh;
-    text-decoration: none;
+.tabs button{
     box-sizing: border-box;
-    display:block;
     color: #3c503a;
     font-weight: bold;
     font-size:1em;
     height:10vh;
+    text-align:center;
     background-color: #5ba353;
     border:none;
     border-radius: 0.5em;
+    background-size: cover;
 }
-.tabs a:hover{
+.tabs button:hover{
     background-color: #88c082;
 }
 hr{
