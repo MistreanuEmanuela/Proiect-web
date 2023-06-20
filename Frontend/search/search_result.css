@@ -19,6 +19,19 @@ body{
     display: flex;
     flex-direction: row;
 }
+.but
+{
+    font-style:italic;
+    background-color: #41b267cb;
+    color: white;
+    margin-left:0%;
+    border-radius: 10px;
+    font-size: 2vi;
+}
+.but:hover
+{
+    color:black;
+}
 .logoBig
 {   
     font-family: inherit;

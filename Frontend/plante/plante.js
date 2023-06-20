@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const decodedToken = decodeJwt(token);
   const userId = decodedToken.userId;
   var collection = JSON.parse(getCookie('collection'));
-
+  if(collection.hasOwnProperty('id')){
   var requestOptions = {
     method: 'GET',
     headers: headers,
@@ -255,8 +255,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     })
     .catch(error => console.log('error', error));
-
-
+  }
+  else{
+    const container = document.getElementById("containerPlante");
+    fetch("https://api.unsplash.com/search/photos?per_page=5&query=plant "+collection.color+" "+collection.anotimp+" "+collection.tip+" "+collection.regiune+"&client_id=bKJI8N2sOJL4hkrLaHo1-AX609SitcL-SsJ3QmcN3_o")
+    .then(response => response.json())
+    .then(data =>{
+      data.results.forEach(element=>{
+        console.log(element);
+        const button = document.createElement('button');
+        const image = document.createElement('img');
+        image.src = element.urls.regular;
+        image.alt = 'not found';
+        button.appendChild(image);
+        const name = document.createElement("p");
+        name.innerHTML += element.alt_description;
+        button.appendChild(name);
+        container.appendChild(button);
+      })
+    })
+  }
 
   function deleteCollection() {
     const confirmed = confirm('Are you sure you want to delete this collection?');

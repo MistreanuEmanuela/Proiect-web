@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         })
                             .then(response => {
                                 if (response.ok) {
-                                    return response.blob(); // Convert the response to a Blob
+                                    return response.blob(); 
                                 } else {
                                     throw new Error('Error: ' + response.status);
                                 }
@@ -99,20 +99,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     var form = document.querySelector('.formular');
     form.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevents the form from submitting and refreshing the page
-
-        // Retrieve the selected values
-        var color = document.querySelector('input[name="color"]:checked');
-        var anotimp = document.querySelector('input[name="anotimp"]:checked');
-        var tip = document.querySelector('input[name="tip"]:checked');
-        var regiune = document.querySelector('input[name="zona"]:checked');
-
-        // Check if null option is selected
-        color = color ? color.value : "c";
-        anotimp = anotimp ? anotimp.value : "a";
-        tip = tip ? tip.value : "i";
-        regiune = regiune ? regiune.value : "r";
-
+        event.preventDefault();
+        var colorGen = document.querySelector('input[name="color"]:checked');
+        var anotimpGen = document.querySelector('input[name="anotimp"]:checked');
+        var tipGen = document.querySelector('input[name="tip"]:checked');
+        var regiuneGen = document.querySelector('input[name="regiune"]:checked');
+        color = colorGen ? colorGen.value : "c";
+        anotimp = anotimpGen ? anotimpGen.value : "a";
+        tip = tipGen ? tipGen.value : "i";
+        regiune = regiuneGen ? regiuneGen.value : "r";
         fetch(`/Proiect/Backend/Controllers/CollectionController.php/filtru/culoare?culoare=${color}&anotimp=${anotimp}&tip=${tip}&regiune=${regiune}`, {
             method: 'GET',
             headers: headers
@@ -146,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             })
                                 .then(response => {
                                     if (response.ok) {
-                                        return response.blob(); // Convert the response to a Blob
+                                        return response.blob(); 
                                     } else {
                                         throw new Error('Error: ' + response.status);
                                     }
@@ -231,10 +226,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 inaltimeResult.innerHTML = `  ${tip}`;
             if (regiune != 'r')
                 regiuneResult.innerHTML = `  ${regiune}`;
-
+        colorGen = colorGen ? colorGen.id : '';
+        anotimpGen = anotimpGen ? anotimpGen.id : '';
+        tipGen = tipGen ? tipGen.id : "";
+        regiuneGen = regiuneGen ? regiuneGen.id : "";
+        console.log(colorGen);
+        console.log(anotimpGen);
+        console.log(tipGen);
+        console.log(regiuneGen);
+        document.getElementById('but').addEventListener('click',function(){
+            var cukie = {
+                color: colorGen,
+                anotimp: anotimpGen,
+                tip: tipGen,
+                regiune: regiuneGen
+            }
+            cukie = JSON.stringify(cukie);
+            var expirationDate = new Date();
+            expirationDate.setTime(expirationDate.getTime() + 24 * 60 * 60 * 1000);
+            document.cookie = "collection="+ cukie + "; expires=" + expirationDate.toUTCString() + "; path=/";
+            window.location.href = "../plante/plante.html";
+        });
         form.reset();
     });
-
+    
     function getCookie(name) {
         var cookieArr = document.cookie.split(';');
         for (var i = 0; i < cookieArr.length; i++) {
@@ -247,12 +262,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function decodeJwt(token) {
-        const base64Url = token.split('.')[1]; // Extract the base64-encoded payload
-        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/'); // Replace URL-safe characters
+        const base64Url = token.split('.')[1]; 
+        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/'); 
         const jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
-            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2); // Convert base64 to ASCII
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2); 
         }).join(''));
 
-        return JSON.parse(jsonPayload); // Parse the JSON payload
+        return JSON.parse(jsonPayload);
     }
 });

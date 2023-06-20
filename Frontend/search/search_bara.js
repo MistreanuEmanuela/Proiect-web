@@ -49,7 +49,7 @@ fetch(`/Proiect/Backend/Controllers/CollectionController.php/filtru/culoare?culo
                 })
                     .then(response => {
                         if (response.ok) {
-                            return response.blob(); // Convert the response to a Blob
+                            return response.blob();
                         } else {
                             throw new Error('Error: ' + response.status);
                         }
@@ -110,7 +110,23 @@ fetch(`/Proiect/Backend/Controllers/CollectionController.php/filtru/culoare?culo
     .catch(error => {
         console.error('Error:', error);
     });
-
+colorGen=localStorage.getItem("colorGen");
+anotimpGen=localStorage.getItem("anotimpGen");
+tipGen=localStorage.getItem("tipGen");
+regiuneGen=localStorage.getItem("regiuneGen");
+document.getElementById('but').addEventListener('click',function(){
+        var cukie = {
+            color: colorGen,
+            anotimp: anotimpGen,
+            tip: tipGen,
+            regiune: regiuneGen
+        }
+        cukie = JSON.stringify(cukie);
+        var expirationDate = new Date();
+        expirationDate.setTime(expirationDate.getTime() + 24 * 60 * 60 * 1000);
+        document.cookie = "collection="+ cukie + "; expires=" + expirationDate.toUTCString() + "; path=/";
+        window.location.href = "../plante/plante.html";
+    });
 function getCookie(name) {
     var cookieArr = document.cookie.split(';');
     for (var i = 0; i < cookieArr.length; i++) {
@@ -123,12 +139,12 @@ function getCookie(name) {
 }
 
 function decodeJwt(token) {
-    const base64Url = token.split('.')[1]; // Extract the base64-encoded payload
-    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/'); // Replace URL-safe characters
+    const base64Url = token.split('.')[1];
+    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
     const jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
-        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2); // Convert base64 to ASCII
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2); 
     }).join(''));
 
-    return JSON.parse(jsonPayload); // Parse the JSON payload
+    return JSON.parse(jsonPayload);
 }
 });
