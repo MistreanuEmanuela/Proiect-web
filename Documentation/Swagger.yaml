@@ -1,0 +1,2109 @@
+openapi: 3.0.3
+info:
+  title: HeMa
+  description: |-
+    This is a aplication with plants
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: apiteam@swagger.io
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.11
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
+servers:
+  - url: http://localhost/Proiect/Backend/Controllers
+paths:
+  /UserController.php/login:
+    post:
+      summary: Conect to app
+      tags:
+        - User
+      operationId: connection
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Successful login
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+        '404':
+          description: Invalid credentials
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        500:
+          description: Internal server error
+  /UserController.php/profile:
+    post:
+      summary: Get user by ID
+      tags:
+        - User
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '404':
+          description: User not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string                    
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string   
+    put: 
+      summary: Change password
+      tags:
+        - User
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: number
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Password updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '404':
+          description: User not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string  
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string 
+    patch: 
+      summary: Change firstname and lastname
+      tags:
+        - User
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: number
+                firstName:
+                  type: string
+                lastName:
+                  type: string
+      responses:
+        '200':
+          description: Profile updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '404':
+          description: Nothing to change
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string                      
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string                    
+  /UserController.php/inregistrare:
+    post:
+      summary: Create a new user
+      tags:
+        - User
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: string
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: string
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: string
+                
+  /UserController.php/finduser:
+    post:
+      summary: Check if username exist
+      tags:
+        - User
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+      responses:
+        '200':
+          description: Exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                type: string
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: string                
+  /UserController.php/mostCol:
+    get:
+      summary: Get top 3 users by collections
+      tags:
+        - User
+      security:
+        - BearerAuth: []        
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                 $ref: '#/components/schemas/UserCollection'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string                      
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string 
+                    
+  /UserController.php/mostPlants:
+    get:
+      summary: Get top 3 users by plants
+      tags:
+        - User
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UserPlants'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string   
+  /UserController.php/RSS/col:
+    get:
+      summary: Get top 10 users by col RSS
+      tags:
+        - User
+      responses:
+        '200':
+          description: OK
+          content:
+            application/xml:
+              schema:
+                type: string
+
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                     
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    
+  /UserController.php/RSS/plants:
+    get:
+      summary: Get top 10 users by plants RSS
+      tags:
+        - User
+      responses:
+        '200':
+          description: OK
+          content:
+            application/xml:
+              schema:
+                type: string
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string    
+                     
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string  
+  /PlantController.php/planta:
+    post:
+     summary: Create a new plant
+     security:
+     - BearerAuth: []   
+     tags:
+      - Plant
+     requestBody:
+      required: true
+      content:
+        multipart/form-data:
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+              desc:
+                type: string
+              image:
+                type: string
+                format: binary
+              collection:
+                type: string
+              culoare:
+                type: string
+              type:
+                type: string
+              zona:
+                type: string
+              anotimp:
+                type: string
+     responses:
+      '200':
+        description:  Plant created successfully
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  example: Plant created successfully
+      '405':
+        description: Method Not Allowed
+      '401':
+        description: Unauthorized
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string         
+        
+      '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string   
+  /PlantController.php/plante/list:
+    get:
+      summary: Get plants by collection ID
+      tags:
+        - Plant
+      security:
+       - BearerAuth: []   
+      parameters:
+        - in: query
+          name: collectionId
+          schema:
+            type: integer
+          required: true
+          description: ID of the collection
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+        '401':
+         description: Unauthorized
+         content:
+           application/json:
+             schema:
+               type: object
+               properties:
+                 message:
+                   type: string                       
+        '404':
+          description: Collection not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+  /PlantController.php/plante/image:
+    get:
+      summary: Get first planta col image
+      tags:
+        - Plant
+      security:
+       - BearerAuth: []   
+      parameters:
+        - in: query
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: ID of the plant
+      responses:
+        '200':
+          description: OK
+          content:
+            image/jpeg: {}
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '404':
+          description: Not Found
+          content:
+           application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string  
+        '401':
+         description: Unauthorized
+         content:
+           application/json:
+             schema:
+               type: object
+               properties:
+                 message:
+                   type: string                      
+  /PlantController.php/info/list: 
+     get:
+      summary: Get planta information
+      tags:
+        - Plant
+      security:
+       - BearerAuth: []   
+      parameters:
+        - in: query
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: ID of the plant
+      responses:
+       '200':
+          description: OK
+          content:
+           application/json:
+            schema:
+                $ref: '#/components/schemas/Planta'
+          
+       '404':
+          description: Not Found
+          content:
+           application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+       '500':
+          description: Internal Server Error
+          content:
+           application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string  
+       '401':
+         description: Unauthorized
+         content:
+           application/json:
+             schema:
+               type: object
+               properties:
+                 message:
+                   type: string                    
+  /PlantController.php/info/image:         
+     get:
+      summary: Get planta image
+      tags:
+        - Plant
+      security:
+       - BearerAuth: []   
+      parameters:
+        - in: query
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: ID of the plant
+      responses:
+        '200':
+          description: OK
+          content:
+            image/jpeg: {}
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string 
+        '401':
+         description: Unauthorized
+         content:
+           application/json:
+             schema:
+               type: object
+               properties:
+                 message:
+                   type: string 
+        '404':
+          description: Not Found
+          content:
+           application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+  /PlantController.php//info/view:
+    get:
+      summary: Get plant views by ID
+      tags:
+        - Plant
+      security:
+        - BearerAuth: []
+      parameters:
+        - in: query
+          name: plantId
+          schema:
+            type: integer
+          required: true
+          description: ID of the plant
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  views:
+                    type: integer
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+  /PlantController.php/info/delete:
+   delete: 
+    summary: Delete plant by ID
+    tags:
+      - Plant
+    security:
+      - BearerAuth: []      
+    parameters:
+      - in: query
+        name: plantaId
+        schema:
+          type: integer
+        required: true
+        description: ID of the plant
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+      '404':
+        description: Not Found
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+      '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string                  
+      '500':
+        description: Internal Server Error
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string   
+                  
+  /PlantController.php/info:
+   put:
+      summary: increment views
+      tags:
+        - Plant
+      security:
+        - BearerAuth: []
+      parameters:
+        - in: query
+          name: plantId
+          schema:
+            type: integer
+          required: true
+          description: ID of the plant 
+      responses:
+       '200':
+         description: View incremented Successfully
+         content:
+           application/json:
+             schema:
+               type: object
+               properties:
+                 message:
+                   type: string
+       '404':
+         description: Not Found
+         content:
+           application/json:
+             schema:
+               type: object
+               properties:
+                 message:
+                   type: string
+       '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string                   
+       '500':
+         description: Internal Server Error
+         content:
+           application/json:
+             schema:
+               type: object
+               properties:
+                 message:
+                   type: string 
+                   
+  /PlantController.php/colectii:
+   get:
+      summary: get image by colection id
+      tags:
+        - Plant
+      security:
+        - BearerAuth: []
+      parameters:
+        - in: query
+          name: collectionId
+          schema:
+            type: integer
+          required: true
+          description: ID of the plant 
+      responses:
+       '200':
+        description: OK
+        content:
+           image/jpeg:
+             schema:
+                type: string
+                format: binary
+       '404':
+         description: Not Found
+         content:
+           application/json:
+             schema:
+               type: object
+               properties:
+                 message:
+                   type: string
+       '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string                   
+       '500':
+         description: Internal Server Error
+         content:
+           application/json:
+             schema:
+               type: object
+               properties:
+                 message:
+                   type: string
+  /PlantController.php/mostViews:
+    get:
+      summary: Get nr plants most views
+      tags:
+        - Plant
+      security:
+        - BearerAuth: []
+      parameters:
+        - in: query
+          name: nr
+          schema:
+            type: integer
+          required: true
+          description: number of plants
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    userName:
+                      type: string
+                    views:
+                      type: integer
+                    userId:
+                      type: integer
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+  /PlantController.php/updateName:
+    put:
+      summary: update name of plant by id
+      tags:
+        - Plant
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                name:
+                  type: string
+      responses:
+        '200':
+          description: OK-name changed
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string  
+  /PlantController.php/updateDesc:
+    put:
+      summary: update desription of plant by id
+      tags:
+        - Plant
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                desc:
+                  type: string
+      responses:
+        '200':
+          description: OK-description updated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string  
+  /PlantController.php/RSS:       
+   get:
+      summary: Get top plants by view count
+      tags:
+        - Plant
+ 
+      responses:
+        '200':
+          description: OK
+          content:
+            application/xml:
+              schema:
+                type: string
+                format: binary
+                
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+  /CollectionController.php/addcolection:
+   post:
+      summary: Create a new collection
+      tags:
+        - Collection
+      security:
+        - BearerAuth: []         
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                desc:
+                  type: string
+                userId:
+                  type: string
+              required:
+                - name
+                - desc
+                - userId
+      responses:
+        '200':
+          description: New collection created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  collectionId:
+                    type: integer
+                  message:
+                    type: string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string                    
+        '500':
+          description: Failed to create a new collection
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+  /CollectionController.php/colectii/list:
+    get:
+      summary: Get collections by user ID
+      tags:
+        - Collection
+      security:
+        - BearerAuth: []        
+      parameters:
+        - in: query
+          name: userId
+          schema:
+            type: string
+          required: true
+          description: ID of the user
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    views:
+                      type: integer
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string                         
+        '404':
+          description: User not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    
+  /CollectionController.php/colectii/all:                    
+   get:
+      summary: Get all collections
+      tags:
+        - Collection
+      security:
+        - BearerAuth: []       
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    views:
+                      type: integer
+                    userId:
+                      type: integer
+                    lastName:
+                      type: string
+                    firstName:
+                      type: string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string                       
+        '404':
+          description: User not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string    
+  /CollectionController.php/filtru/culoare:                    
+    get:
+      summary: Get collections by tags
+      tags:
+        - Collection
+      security:
+        - BearerAuth: []        
+      parameters:
+        - in: query
+          name: culoare
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: anotimp
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: regiune
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: tip
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    views:
+                      type: integer
+                    userId:
+                      type: integer
+                    lastName:
+                      type: string
+                    firstName:
+                      type: string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string                            
+        '404':
+          description: User not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+  /CollectionController.php/view:         
+    get:
+      summary: Get view count
+      tags:
+        - Collection
+      security:
+        - BearerAuth: []       
+      parameters:
+        - in: query
+          name: collectionId
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  views:
+                    type: integer
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string                          
+        '404':
+          description: Collection not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+    put:
+      summary: Increment view count
+      tags:
+        - Collection
+      security:
+        - BearerAuth: []       
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: integer
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string                          
+        '404':
+          description: Collection not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string   
+  /CollectionController.php/info:                        
+   get:
+      summary: Get info by collectionId
+      tags:
+        - Collection
+      security:
+        - BearerAuth: []       
+      parameters:
+        - in: query
+          name: collectionId
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  description:
+                    type: string
+                  user:
+                    type: integer
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string                     
+        '404':
+          description: Collection not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string  
+  /CollectionControler.php/delete:
+   delete: 
+    summary: Delete colection by ID
+    tags:
+      - Collection
+    security:
+      - BearerAuth: []      
+    parameters:
+      - in: query
+        name: plantaId
+        schema:
+          type: integer
+        required: true
+        description: ID of collection
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+      '404':
+        description: Not Found
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+      '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string                  
+      '500':
+        description: Internal Server Error
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string   
+  /CollectionControler.php/biggest:
+   get: 
+    summary: Get biggest collection
+    tags:
+      - Collection
+    security:
+      - BearerAuth: [] 
+    responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    colName:
+                      type: string
+                    userName:
+                      type: string
+                    pCount:
+                      type: integer
+        '401':
+            description: Unauthorized
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    message:
+                      type: string                         
+        '404':
+          description: Collection not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string  
+                    
+  /CollectionControler.php/mostView:
+   get: 
+    summary: Get most view collection
+    tags:
+      - Collection
+    security:
+      - BearerAuth: [] 
+    responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    userName:
+                      type: string
+                    views:
+                      type: integer
+        '401':
+            description: Unauthorized
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    message:
+                      type: string                         
+        '404':
+          description: Collection not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    
+  /CollectionController.php/updateName:
+    put:
+      summary: update name of colletion by id
+      tags:
+        - Collection
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                name:
+                  type: string
+      responses:
+        '200':
+          description: OK-name changed
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string  
+                    
+  /CollectionController.php/updateDesc:
+    put:
+      summary: update description of collection by id
+      tags:
+        - Collection
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                desc:
+                  type: string
+      responses:
+        '200':
+          description: OK-description updated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string  
+                    
+  /CollectionController.php/RSS/big:       
+   get:
+      summary: Get top 10 collection by size
+      tags:
+        - Collection
+ 
+      responses:
+        '200':
+          description: OK
+          content:
+            application/xml:
+              schema:
+                type: string
+                format: binary
+                
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string   
+                    
+  /CollectionController.php/RSS/view:       
+   get:
+      summary: Get top 10 collection by views
+      tags:
+        - Collection
+ 
+      responses:
+        '200':
+          description: OK
+          content:
+            application/xml:
+              schema:
+                type: string
+                format: binary
+                
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string  
+                    
+  /TagController.php/tag:
+    post:
+      summary: Create a tag for a collection
+      tags:
+        - Tags
+      security:
+        - BearerAuth: []      
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                tag:
+                  type: string
+                collectionId:
+                  type: integer
+      responses:
+        '200':
+          description: Tag added successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  collectionId:
+                    type: integer
+                  message:
+                    type: string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string                    
+        '409':
+          description: Collection with the tag already exists
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Failed to add collection tag
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+  /StatsController.php/list:
+   get:
+      summary: Get statistics
+      tags:
+        - Stats
+      security:
+        - BearerAuth: []         
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  userCount:
+                    type: integer
+                  plantCount:
+                    type: integer
+                  collectionCount:
+                    type: integer
+                  userMonth:
+                    type: integer
+                  plantMonth:
+                    type: integer
+                  collectionMonth:
+                    type: integer
+                  pViewsMonth:
+                    type: integer
+                  cViewsMonth:
+                    type: integer
+                  userTotal:
+                    type: integer
+                  plantTotal:
+                    type: integer
+                  collectionTotal:
+                    type: integer
+                  pViewsTotal:
+                    type: integer
+                  cViewsTotal:
+                    type: integer
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string                     
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+  /StatsController.php/file/CSV:
+    get:
+      summary: Get CSV
+      tags:
+        - Stats
+      security:
+        - BearerAuth: []         
+      responses:
+        '200':
+          description: CSV file generated successfully
+          headers:
+            Content-Disposition:
+              schema:
+                type: string
+              description: Content disposition header
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string               
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+  /StatsController.php/file/PDF:
+    get:
+      summary: Get PDF
+      tags:
+        - Stats
+      security:
+        - BearerAuth: []         
+      responses:
+        '200':
+          description: PDF file generated successfully
+          headers:
+            Content-Disposition:
+              schema:
+                type: string
+              description: Content disposition header
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string               
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                          
+      
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+        username:
+          type: string
+        password:
+          type: string
+        email:
+          type: string
+        firstName:
+          type: string
+        lastName:
+          type: string
+          
+    Planta:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        collectionId:
+          type: integer
+        photo:
+          type: string
+          format: binary
+        description:
+          type: string
+    Collection:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        userId:
+          type: integer
+        views:
+          type: integer
+        description:
+          type: string
+    CollectionTag:
+      type: object
+      properties:
+        collectionId:
+          type: integer
+        tag:
+          type: string
+        id:
+          type: integer
+    Stats:
+      type: object
+      properties:
+        id:
+          type: integer
+        month:
+          type: string
+        users:
+          type: integer
+        plants:
+          type: integer
+        collections:
+          type: integer
+        plantViews:
+          type: integer
+        collectionViews:
+          type: integer  
+    UserCollection:
+      type: object
+      properties:
+        userName:
+          type: string
+        cCount:
+          type: integer
+    UserPlants:
+      type: object
+      properties:
+        userName:
+          type: string
+        pCount:
+          type: integer        
+  securitySchemes:
+    BearerAuth:
+      type: apiKey
+      name: Authorization
+      in: header
