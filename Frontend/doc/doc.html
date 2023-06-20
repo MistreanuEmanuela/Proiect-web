@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEMA - Inregistrare</title>
+    <link rel="stylesheet" href="doc.css">
+</head>
+<body prefix="schema: http://schema.org">
+    <header>
+        <h1>HeMa Project: Herbal Web Manager</h1>
+    </header>
+    <div role="contentinfo">
+        <ol role="menu">
+            <li>
+                <a href="#abstract">
+                    <span>1. Abstract</span>
+                </a>
+            </li>
+            <li>
+                <span>
+                  <a href="#introduction">2. Introducere</a>
+                </span>
+                <ol>
+                  <li>
+                    <span>
+                      <a href="#purpose">2.1 Motivatie</a>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#scope">2.2 Despre Produs</a>
+                    </span>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <a href="#Description">
+                  <span>3. Descriere</span>
+                </a>
+                <ol>
+                  <li>
+                    <a href="#perspective">
+                      <span>3.1 Perspectiva</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#functionalities">
+                      <span>3.2 Functionalitati</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#users">
+                      <span>3.3 Users</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#assumptions">
+                      <span>3.4 Presupuneri si Dependente</span>
+                    </a>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <a href="#Interface">
+                  <span>4. Interface</span>
+                </a>
+                <ol>
+                  <li>
+                    <a href="#pages">
+                      <span>4.1 Pagini</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#design">
+                      <span>4.2 Design</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#Hardware">
+                      <span>4.3 Hardware</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#Software">
+                      <span>4.4 Software</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#Communications">
+                      <span>4.5 Communications</span>
+                    </a>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <a href="#Architecture">
+                  <span>5. Arhitectura</span>
+                </a>
+                <ol>
+                  <li>
+                    <a href="#use-cases">
+                      <span>5.1 Fisa cerintelor</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#Diagrams">
+                      <span>5.2 Diagrame</span>
+                    </a>
+                  </li>
+                </ol>
+              </li>
+        </ol>
+        <dl>
+            <dt>Autori:<dt>
+            <dd>
+                <div typeof="sa:ContributorRole" property="schema:Author">
+                    <span typeof="schema:Person">
+                        <meta property="schema:familyName" content="Mistreanu">
+                        <meta property="schema:givenName"  content="Emanuela">
+                        <span property="schema:name">Mistreanu Emanuela</span>
+                    </span>
+                </div>
+                <div typeof="sa:ContributorRole" property="schema:Author">
+                    <span typeof="schema:Person">
+                        <meta property="schema:familyName" content="Vlad">
+                        <meta property="schema:givenName" content="Adriana">
+                        <span property="schema:name">Vlad Adriana</span>
+                    </span>
+                </div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>Afiliere:</dt>
+            <dd>
+            <span typeof="schema:CollegeOrUniversity" resource="https://www.info.uaic.ro">
+                <span property="schema:role">Studente la</span>
+                <span property="schema:name">Facultatea de Informatica, </span>
+                <span property="schema:parentOrganization">
+                    <span property="schema:CollegeOrUniversity" resource="https://www.uaic.ro">
+                        <span property="schema:name">Universitatea Alexandru Ioan Cuza</span>
+                        <span property="schema:addressLocality">Iasi</span>
+                    </span>
+                </span>
+            </span>
+            </dd>
+        </dl>
+    </div>
+    <section typeof="sa:Abstract" id="abstract">
+        <h2>1. Abstract:</h2>
+        <p>
+            Aplicatia Herbal Web Manager, HeMa pe scurt, ofera suport pentru organizarea colectiilor de plante
+            , oferind o metoda usoara pentru a gasi diverse plante, pe baza unor criterii generale si organizarea lor
+             in colectii. 
+        </p>
+    </section>
+    <section id="introduction">
+        <h2>2. Introducere:</h2>
+        <section id="purpose">
+            <h3>2.1 Motivatie</h3>
+            <p>
+                Am ales acest proiect din lista celor propuse deoarece ne-a placut ideea unei aplicatii pentru
+                amatorii de gradinarit, colectionarii de plante si cei interesati de astfel de subiecte. O membra a echipei noastre
+                este foarte pasionata de plante, iar celalalta a fost de acord ca ideea era draguta.
+            </p>
+            <p>
+                Scopul realizarii proiectului este de a ne familiariza 
+                cu anumite limbaje de marcare si programare, precum 
+                <span typeof="schema:ComputerLanguage">
+                    <span property="schema:name">HTML</span>
+                </span>
+                , 
+                <span typeof="schema:ComputerLanguage">
+                    <span property="schema:name">CSS</span>
+                </span>
+                 si 
+                <span typeof="schema:ComputerLanguage">
+                    <span property="schema:name">PHP</span>
+                </span>
+                dar si cu alte aspecte legate de tehnologiile Web
+                 si modul in care acestea se aplica in cadrul unui proiect practic.
+            </p>
+        </section>
+        <section id="scope">
+            <h3>2.2 Despre Produs</h3>
+            <p>
+                Aplicatia vine in ajutorul pasionatilor de plante, fiind o plantforma prin intermediul careia acestia vor putea
+                 sa creeze diverse colectii dupa bunul plac, sa adauge si sa vizualizeze plantele din cadrul acestora, atasand plantelor
+                 descrierea pe care si-o doresc. Utilizatorii vor putea vizualiza si colectiile celorlalti si ce descrieri au adaugat
+                 alti utilizatori la plantele lor. Aplicatia ofera si posibilitatea vizualizarii unor statistici si topuri ce pot fi
+                 exportate in diverse formate.
+            </p>
+        </section>
+    </section>
+    <section id="Description">
+        <h2>3. Descriere:</h2>
+        <section id="perspective">
+            <h3>3.1 Perspectiva</h3>
+            <p>
+                Acesta este un proiect realizat pentru materia 
+                <span typeof="schema:Course" resource="https://profs.info.uaic.ro/~busaco/teach/courses/web/index.html"> </span>
+                    <span property="schema:name">Tehnologii Web</span>
+                in anul 2 al 
+                <span typeof="schema:CollegeOrUniversity" resource="https://www.info.uaic.ro">
+                    <span property="schema:name">Facultatii de Informatica Iasi.</span>
+                </span>
+                Timpul total de realizare al proiectului este de aproximativ 3 luni. Proiectul nu este, deci, realizat in scop comercial, ci doar 
+                pentru a ne exersa cunostintele si de a dobandi noi abilitati.
+            </p>
+        </section>
+        <section id="functionalities">
+            <h3>3.2 Functionalitati</h3>
+                Utilizatorii vor putea:
+                <ul>
+                    <li>crea un cont, prin intermediul caruia vor avea acces la aplicatie</li>
+                    <li>accesa pagina Help, unde pot gasi explicatii legate de modul de utilizare a platformei</li>
+                    <li>accesa pagina About, unde vor gasi informatii despre aplicatie si developeri</li>
+                    <li>vizualiza colectiile personale, pe pagina Colections</li>
+                    <li>crea noi colectii de pe pagina Colections</li>
+                    <li>modifica numele si descrierea unei colectii proprii, de pe pagina de vizualizare a unei colectii</li>
+                    <li>adauga noi plante intr-o colectie proprie, de pe pagina de vizualizare a unei colectii</li>
+                    <li>vizualiza informatiile legate de o anumita planta, fie dintr-o colectie fie ca rezultat al unui search</li>
+                    <li>modifica numele si descrierea unei plante proprii, de pe pagina de vizualizare a unei plante</li>
+                    <li>accesa pagina Rankings, unde se vor gasi diverse statistici si topuri legate de aplicatie</li>
+                    <li>descarca statisticile in format CSV si PDF</li>
+                    <li>vizualiza topurile, individual, in format RSS</li>
+                    <li>cauta colectii pe baza unor criterii si vizualiza rezultatele</li>
+                    <li>vedea documentatia proiectului</li>
+                    <li>vedea informatii legate de propriul cont</li>
+                    <li>modifica informatii legate de propriul cont</li>
+                    <li>sa se deconecteze din cont</li>
+                </ul>
+        </section>
+        <section id="users">
+            <h3>3.3 Users</h3>
+            <p>
+                Dupa cum am mentionat anterior, aplicatia este dedicata amatorilor de gradinarit, colectionarilor de plante si tuturor celor
+                interesati de alte aspecte alte botanicii. Desi colectionarii vor putea beneficia cel mai mult de functionalitatile oferite de noi,
+                 consideram ca toate aceste persoane pot gasi ceva util sau interesant folosind aplicatia noastra.
+            </p>
+        </section>
+        <section id="assumptions">
+            <h3>3.4 Presupuneri si Dependente</h3>
+            <p>
+                In eventualitatea in care putem accesa iar email-ul de student oferit de facultate, vor putea hosta proiectul, ca acesta 
+                sa poata fi utilizat online de pe orice device.
+            </p>
+        </section>
+    </section>
+    <section id="Interface">
+        <h2>4. Interface</h2>
+        <section id="pages">
+            <h3>4.1 Pagini</h3>
+                <section id="Sign-in">
+                    <h4>4.1.1 Sign in</h4>
+                    <figure typeof="sa:image">
+                        <img src="sign.png" alt="sign">
+                    </figure>
+                    <p>
+                        Aceasta este prima pagina catre care este directionat un utilizator cand deschide aplicatia.
+                        Aici va putea sa introduca datele sale de identificare si sa se conecteze, caz in care e redirectionat catre Pagina Principala.
+                        In cazul in care acesta nu are cont, poate sa acceseze pagina de Inregistrare prin butonul de inregistrare.
+                        Daca nu vrea sa se conecteze, poate sa acceseze direct de aici paginile Help si About.
+                    </p>
+                </section>
+                <section id="Inregistrare">
+                    <h4>4.1.2 Inregistrare</h4>
+                    <figure typeof="sa:image">
+                        <img src="inregistrare.png" alt="inregistrare">
+                    </figure>
+                    <p>
+                        Aici utilizatorul isi va putea crea un cont prin introducerea datelor cerute.
+                    </p>
+                </section>
+                <section id="Main-page">
+                    <h4>4.1.3 Main Page</h4>
+                    <figure typeof="sa:image">
+                        <img src="main.png" alt="main"> 
+                    </figure>
+                    <p>
+                        Aceasta este Pagina Principala a aplicatiei. De aici un utilizator poate sa acceseze paginile din bara se sus si sa se deconecteze din cont.
+                        In partea superioara a paginii va gasi si bara de search, prin intermediul careia va putea cauta colectii pe baza textului liber introdus. 
+                        In josul paginii sunt expuse cateva din cele mai populare plante care exista in momentul actual. Butonul vezi colectii redirecteaza
+                        catre o cautare multi-criteriala.
+                    </p>
+                </section>
+                <section id="Collections">
+                    <h4>4.1.4 Colectii</h4>
+                    <figure typeof="sa:image">
+                        <img src="colectii.png" alt="colectii">
+                    </figure>
+                    <p>
+                       Aici utilizatorul va putea vizualiza lista colectiilor sale. Poate accesa pagina de Adaugare Colectie prin butonul aferent
+                        sau sa vizualizeze continutul unei colectii prin apasarea imaginii colectiei respective.
+                        Se regasesc si aici elementele paginii principale: meniu, titlu, searchbar.
+                    </p>
+                </section>
+                <section id="Tops">
+                    <h4>4.1.5 Statistici si Rankings</h4>
+                    <figure typeof="sa:image">
+                        <img src="tops.png" alt="tops">
+                    </figure>
+                    <p>
+                        Pe aceasta pagina utilizatorul poate vedea mai intai statistici, precum: cea mai mare colectie, cele mai multe colectii, 
+                        etc. Acestea vor pot fi exportate in format PDF sau CSV apasand pe butoanele aferente.
+                        In partea de jos a paginii se afla diverse clasamente, care pot fi vizualizate si in format RSS.
+                        Se regasesc si aici elementele paginii principale: meniu, titlu, searchbar.
+                    </p>
+                </section>
+                <section id="Help">
+                    <h4>4.1.6 Help</h4>
+                    <figure typeof="sa:image">
+                        <img src="help.png" alt="help">
+                    </figure>
+                    <p>
+                        Aceasta pagina vine in ajutorul utilizatorului, oferind raspunsuri legate de modul de utilizare a aplicatiei.
+                        Oferim utilizatorilor instructiuni pas-cu-pas ca raspuns la intrebari pe care le-am considerat ca pot fi comune.
+                        De aici poate accesa Pagina Principala, daca este logat, sau pagina de Sign in daca nu. In amebele cazuri, insa, poate accesa si pagina About.
+                    </p>
+                </section>
+                <section id="About">
+                    <h4>4.1.7 About</h4>
+                    <figure typeof="sa:image">
+                        <img src="about.png" alt="about">
+                    </figure>
+                    <p>
+                        Aceasta pagina descrie anumite aspecte generale legate de aplicatie si poate reprezenta un fel de introducere la functionalitatile pe care le oferim.
+                        De aici poate accesa Pagina Principala, daca este logat, sau pagina de Sign in daca nu. In amebele cazuri, insa, poate accesa si pagina Help.
+                    </p>
+                </section>
+                <section id="Scholarly-HTML">
+                    <h4>4.1.8 Scholarly-HTML</h4>
+                    <p>
+                        Aceasta este pagina pe care o cititi acum! Ofera informatii legate de modul de dezvoltate si o explicare detaliata a
+                        functionalitatilor si intentiilor aplicatiei.
+                    </p>
+                </section>
+                <section id="Search-results">
+                    <h4>4.1.9 Search results</h4>
+                    <figure typeof="sa:image">
+                        <img src="search-results.png" alt="search-results">
+                    </figure>
+                    <p>
+                       Aici va fi redirectionat utlizatorul dupa ce face un search din bara de sus. Acesta va primii sugestii de colectii create de alti useri, pe baza cuvintelor cheie introduse. 
+                       In urma apasarii pe o imagine, acesta va fi redirectionat la pagina de vizualizare 
+                       corespunzatoare colectiei respective.
+                        Se regasesc si aici elementele paginii principale: meniu, titlu, searchbar.
+                    </p>
+                </section>
+                <section id="Vizualizare-colectie">
+                    <h4>4.1.10 Vizualizare-plante</h4>
+                    <figure typeof="sa:image">
+                        <img src="plante.png" alt="plante">
+                    </figure>
+                    <p>
+                        Aici utilizatorul va putea vizualiza lista plantelor din colectia accesata, precum si numarul de vizualizaari ale colectiei. Daca vizualizeaza o colectie
+                        proprie poate edita numele, descrierea sterge colectia sau adauga o planta, prin butoanele aferente, sau sa vizualizeze informatii despre o planta prin apasarea imaginii plantei respective.
+                        Se regasesc si aici elementele paginii principale: meniu, titlu, searchbar.
+                    </p>
+                </section>
+                <section id="Info-Planta">
+                    <h4>4.1.11 Info Planta</h4>
+                    <figure typeof="sa:image">
+                        <img src="info-planta.png" alt="info-planta">
+                    </figure>
+                    <p>
+                       Pe aceasta pagina utilizatorul va gasi numele plantei, o imagine reprezentativa, o descriere si tagurile corespunzaatoare adaugate de un user la crearea plantei, 
+                       precum si numarul de vizualizari ale plantei. Daca vizualizeaza o planta proprie, utilizatorul va putea modifica numele, descrierea si va putea sterge planta
+                       prin butonul aferent. Se regasesc si aici elementele paginii principale: meniu, titlu, searchbar.
+                         
+                    </p>
+                </section>
+                <section id="Add-Collection">
+                    <h4>4.1.12 Adaugare Colectie</h4>
+                    <figure typeof="sa:image">
+                        <img src="add-col.png" alt="add_col">
+                    </figure>
+                    <p>
+                        Aici utilizatorul va introduce numele ssi descrierea noii colectii pe care vrea sa o creeze.
+                        Se regasesc si aici elementele paginii principale: meniu, titlu, searchbar.
+                    </p>
+                </section>
+                <section id="Add-Plant">
+                    <h4>4.1.13 Adaugare Planta</h4>
+                    <figure typeof="sa:image">
+                        <img src="add-plant.png" alt="add_plant">
+                    </figure>
+                    <p>
+                       Aici utilizatorul va introduce informatiile reprezentative unei plante pe care doreste sa o adauge in colectia din care a apasat butonul de adaugare.
+                       Tag urile sunt diverse, dar predefinite, si sunt folosite in cadrul functionalitatii de search. 
+                        Se regasesc si aici elementele paginii principale: meniu, titlu, searchbar.
+                    </p>
+                </section>
+                <section id="Profile">
+                    <h4>4.1.14 Profil</h4>
+                    <figure typeof="sa:image">
+                        <img src="profile.png" alt="profile">
+                    </figure>
+                    <p>
+                        Aici utilizatorul va putea vizualiza si updata informatii legate de contul prin care este conectat la momentul respectiv.
+                    </p>
+                </section>
+                <section id="Search">
+                    <h4>4.1.15 Search</h4>
+                    <figure typeof="sa:image">
+                        <img src="search.png" alt="search">
+                    </figure>
+                    <p>
+                        Aici va fi redirectionat utlizatorul dupa ce apasa butonul aferent de pe pagina principala. Acesta va primii sugestii de colectii create de alti useri, pe baza tag urilor selectate din meniu. 
+                       In urma apasarii pe o imagine, acesta va fi redirectionat la pagina de vizualizare 
+                       corespunzatoare colectiei respective.
+                        Se regasesc si aici elementele paginii principale: meniu, titlu, searchbar.
+                    </p>
+                </section>
+        </section>
+        <section id="Design">
+            <h3>4.2 Design</h3>
+            <p>
+                Designul este unul curat, dar plin de viata. Culoarea predominanta este verdele, platforma fiind legata de plante si natura. In complementul acesteia am folosit
+                culoarea neutra alb, cu text negru. Butoanele de delete sunt rosii pentru a claritate. Folosim, de asemenea, o multitudine de imagini pentru a consolida tematica
+                aplicatiei, dar si acestea sunt folosite in asa fel incat sa nu acapareze elementele importante ale paginii, si sa nu deruteze utilizatorul. 
+            </p>
+        </section>
+        <section id="Hardware">
+            <h3>4.3 Hardware</h3>
+            <p>
+                Designul este responsiv, prin urmare, teoretic vorbind, userii vor putea interactiona cu platforma noastra de pe orice tip de device
+                 cu acces la internet. Practic, insa, nu avem la dispozitie nici un mijloc de hostare a platformei fara a incalca constrangerile proiectului, 
+                 astfel incat aplicatia va ramane momentan una locala.
+            </p>
+        </section>
+        <section id="Software">
+            <h3>4.4 Software</h3>
+            <p>
+                Pe partea de front, aplicatia va folosi
+                <span typeof="schema:ComputerLanguage">
+                    <span property="schema:name">HTML</span>
+                </span>
+                 si 
+                <span typeof="schema:ComputerLanguage">
+                    <span property="schema:name">CSS</span>
+                </span>
+                , iar pe partea de back vom utiliza 
+                <span typeof="schema:ComputerLanguage">
+                    <span property="schema:name">PHP</span>
+                </span>
+                , precum si o baza de date hostata prin serviciile oferite de aplicatia
+                <span typeof="schema:SoftwareApplication">
+                    <span property="schema:name">XAMPP</span>
+                </span>
+                . In rest, majoritatea informatiilor vor fi introduse insusi de utilizator.
+            </p>
+        </section>
+        <section id="Communications">
+            <h3>4.5 Communications</h3>
+            <p>
+                Tot ce tine de aplicatie va fie accesat
+                 de pe un browser web ales de utilizator. Documentatia si fisierele aferente proiectului se regasesc pe un git repository privat, 
+                 fiind momentan indisponibile pe o platforma de hostare.
+            </p>
+        </section>
+    </section>
+    <section id="Architecture">
+        <h2>5. Arhitectura</h2>
+        <section id="use-cases">
+            <h3>5.1 Fisa cerintelor</h3>
+            <section id="SF1">
+                <h4>5.1.1 Sign in</h4>
+                <section id="Sign-inSF">
+                    <h5>5.1.1.1 Descriere & Prioritate</h5>
+                    <p>
+                        Prioritate mare.
+                        Userul se poate conecta la propriul cont.
+                    </p>
+                </section>
+                <section id="SF1-Stimulus/Response">
+                    <h5>5.1.1.2 Stimul/Raspuns Sequence List</h5>
+                        <ul>
+                            <li>userul introduce username ul si parola in campurile corespunzatoare</li>
+                            <li>userul apasa pe butonul Submit</li>
+                        </ul>
+                </section>
+                <section id="SF1-Functional-Requirements">
+                    <h5>5.1.1.3 Dependente Functionale</h5>
+                    <p>
+                        existenta unei baze de date compatibile, functionalitatea inregistrarii.
+                    </p>
+                </section>
+            </section>
+            <section id="SF2">
+                <h4>5.1.2 Creare cont</h4>
+                <section id="Creare-contSF">
+                    <h5>5.1.2.1 Descriere & Prioritate</h5>
+                    <p>
+                        Prioritate mare.
+                        Userul poate crea un cont nou, propriu.
+                    </p>
+                </section>
+                <section id="SF2-Stimulus/Response">
+                    <h5>5.1.2.2 Stimul/Raspuns Sequence List</h5>
+                        <ul>
+                            <li>userul introduce datele cerute, conform descrierii de deasupra campurilor</li>
+                            <li>userul apasa pe butonul Submit</li>
+                        </ul>
+                </section>
+                <section id="SF2-Functional-Requirements">
+                    <h5>5.1.2.3 Dependente Functionale</h5>
+                    <p>
+                        existenta unei baze de date compatibile
+                    </p>
+                </section>
+            </section>
+            <section id="SF3">
+                <h4>5.1.3 Searchbar</h4>
+                <section id="SearchSF">
+                    <h5>5.1.3.1 Descriere & Prioritate</h5>
+                    <p>
+                        Prioritate medie.
+                        Utilizatorul poate introduce niste criterii descriptive, iar aplicatia ii va sugera colectii corespunzatoare.
+                    </p>
+                </section>
+                <section id="SF3-Stimulus/Response">
+                    <h5>5.1.3.2 Stimul/Raspuns Sequence List</h5>
+                        <ul>
+                            <li>userul intra in cont</li>
+                            <li>de pe orice pagina din acest moment, fara Help si About, userul gaseste bara de search in partea de sus a paginii</li>
+                            <li>userul introduce termeni descriptivi in bara de cautare</li>
+                            <li>userul apasa pe iconita din dreapa barei de cautare</li>
+                            <li>userul va fi redirectionat la pagina cu rezultatele generate</li>
+                        </ul>
+                </section>
+                <section id="SF3-Functional-Requirements">
+                    <h5>5.1.3.3 Dependente Functionale</h5>
+                    <p>
+                        existenta de colectii create de alti useri in baza de date, functionalitatile logarii de adaugare colectii si plante cu tag uri.
+                    </p>
+                </section>
+            </section>
+            <section id="SF4">
+                <h4>5.1.4 Vizualizare colectii</h4>
+                <section id="Vizualizare-colectiiSF">
+                    <h5>5.1.4.1 Descriere & Prioritate</h5>
+                    <p>
+                        Prioritate mare.
+                        Userul poate vizualiza colectiile proprii
+                    </p>
+                </section>
+                <section id="SF4-Stimulus/Response">
+                    <h5>5.1.4.2 Stimul/Raspuns Sequence List</h5>
+                        <ul>
+                            <li>userul intra in cont</li>
+                            <li>de pe orice pagina din acest moment, fara Help si About, userul gaseste butonul Colections in partea de sus a paginii</li>
+                            <li>userul intra pe pagina Colectii apasand pe acel buton</li>
+                        </ul>
+                </section>
+                <section id="SF4-Functional-Requirements">
+                    <h5>5.1.4.3 Dependente Functionale</h5>
+                    <p>
+                        functionalitatea logarii.
+                    </p>
+                </section>
+            </section>
+            <section id="SF5">
+                <h4>5.1.5 Vizualizare plante</h4>
+                <section id="Vizualizare-planteSF">
+                    <h5>5.1.5.1 Descriere & Prioritate</h5>
+                    <p>
+                        Prioritate mare.
+                        Userul poate vizualiza plantele dintr-o colectie.
+                    </p>
+                </section>
+                <section id="SF5-Stimulus/Response">
+                    <h5>5.1.5.2 Stimul/Raspuns Sequence List</h5>
+                        <ul>
+                            <li>userul intra in cont</li>
+                        </ul>
+                            V1:
+                        <ul>
+                            <li>de pe orice pagina din acest moment, fara Help si About, userul gaseste butonul Colections in partea de sus a paginii</li>
+                            <li>userul intra pe pagina Colectii apasand pe acel buton</li>
+                            <li>userul intra pe pagina Vizualizare Colectii apasand imaginea unei colectii</li>
+                        </ul>
+                            V2:
+                        <ul>
+                            <li>userul foloseste functia de search</li>
+                            <li>din lista rezultatelor, userul apasa pe imaginea unei colectii</li>
+                        </ul>
+                </section>
+                <section id="SF5-Functional-Requirements">
+                    <h5>5.1.5.3 Dependente Functionale</h5>
+                    <p>
+                        existenta unor colectii in baza de date, functionalitatea logarii
+                    </p>
+                </section>
+            </section>
+            <section id="SF6">
+                <h4>5.1.6 Vizualizare info planta</h4>
+                <section id="Vizualizare-info-plantaSF">
+                    <h5>5.1.6.1 Descriere & Prioritate</h5>
+                    <p>
+                        Prioritate mare.
+                        Userul poate vizualiza informatiile despre o planta.
+                    </p>
+                </section>
+                <section id="SF6-Stimulus/Response">
+                    <h5>5.1.6.2 Stimul/Raspuns Sequence List</h5>
+                        <ul>
+                            <li>userul intra in cont</li>
+                            <li>userul vizualizeaza o colectie</li>
+                            <li>userul intra pe pagina Info Planta apasand imaginea unei plante</li>
+                        </ul>
+                </section>
+                <section id="SF6-Functional-Requirements">
+                    <h5>5.1.6.3 Dependente Functionale</h5>
+                    <p>
+                        existenta unor colectii si plante in baza de date, functionalitatea logarii
+                    </p>
+                </section>
+            </section>
+            <section id="SF7">
+                <h4>5.1.7 Adaugare colectie</h4>
+                <section id="Adaugare-colectieSF">
+                    <h5>5.1.7.1 Descriere & Prioritate</h5>
+                    <p>
+                        Prioritate mare.
+                        Userul poate adauga o noua colectie.
+                    </p>
+                </section>
+                <section id="SF7-Stimulus/Response">
+                    <h5>5.1.7.2 Stimul/Raspuns Sequence List</h5>
+                        <ul>
+                            <li>userul intra in cont</li>
+                            <li>userul vizualizeaza lista colectiilor proprii</li>
+                            <li>userul apasa pe butonul Creare colectie noua</li>
+                        </ul>
+                </section>
+                <section id="SF7-Functional-Requirements">
+                    <h5>5.1.7.3 Dependente Functionale</h5>
+                    <p>
+                        functionalitatea logarii
+                    </p>
+                </section>
+            </section>
+            <section id="SF8">
+                <h4>5.1.8 Adaugare planta</h4>
+                <section id="Adaugare-plantaSF">
+                    <h5>5.1.8.1 Descriere & Prioritate</h5>
+                    <p>
+                        Prioritate mare.
+                        Userul poate adauga o noua planta la o colectie.
+                    </p>
+                </section>
+                <section id="SF8-Stimulus/Response">
+                    <h5>5.1.8.2 Stimul/Raspuns Sequence List</h5>
+                        <ul>
+                            <li>userul intra in cont</li>
+                            <li>userul vizualizeaza o colectie proprie</li>
+                            <li>userul apasa pe butonul Adauga o noua planta</li>
+                        </ul>
+                </section>
+                <section id="SF8-Functional-Requirements">
+                    <h5>5.1.8.3 Dependente Functionale</h5>
+                    <p>
+                        existenta unor colectii, functionalitatea logarii
+                    </p>
+                </section>
+            </section>
+            <section id="SF9">
+                <h4>5.1.9 Vizualizare Tops</h4>
+                <section id="Vizualizare-statisticiSF">
+                    <h5>5.1.9.1 Descriere & Prioritate</h5>
+                    <p>
+                        Prioritate medie.
+                        Userul poate vizualiza anumite statistici si rankings legate de aplicatie.
+                    </p>
+                </section>
+                <section id="SF9-Stimulus/Response">
+                    <h5>5.1.9.2 Stimul/Raspuns Sequence List</h5>
+                        <ul>
+                            <li>userul intra in cont</li>
+                            <li>de pe orice pagina din acest moment, fara Help si About, userul gaseste butonul Tops in partea de sus a paginii</li>
+                            <li>userul apasa pe butonul Tops</li>
+                        </ul>
+                </section>
+                <section id="SF9-Functional-Requirements">
+                    <h5>5.1.9.3 Dependente Functionale</h5>
+                    <p>
+                        existenta unor useri, colectii si plante in baza de date. functionalitatea logarii.
+                    </p>
+                </section>
+            </section>
+            <section id="SF10">
+                <h4>5.1.10 Vizualizare Help</h4>
+                <section id="Vizualizare-helpSF">
+                    <h5>5.1.10.1 Descriere & Prioritate</h5>
+                    <p>
+                        Prioritate mica.
+                        Userul poate vizualiza anumite raspunsuri ajutatoare legate de utilizarea aplicatiei.
+                    </p>
+                </section>
+                <section id="SF10-Stimulus/Response">
+                    <h5>5.1.10.2 Stimul/Raspuns Sequence List</h5>
+                        <ul>
+                            <li>de pe orice pagina userul gaseste butonul Help, in partea de sus a paginii</li>
+                            <li>userul apasa pe butonul Help</li>
+                        </ul>
+                </section>
+                <section id="SF10-Functional-Requirements">
+                    <h5>5.1.10.3 Dependente Functionale</h5>
+                    <p>
+                        N/A
+                    </p>
+                </section>
+            </section>
+            <section id="SF11">
+                <h4>5.1.11 Vizualizare About</h4>
+                <section id="Vizualizare-aboutSF">
+                    <h5>5.1.11.1 Descriere & Prioritate</h5>
+                    <p>
+                        Prioritate mica.
+                        Userul poate vizualiza o descriere a aplicatiei.
+                    </p>
+                </section>
+                <section id="SF11-Stimulus/Response">
+                    <h5>5.1.11.2 Stimul/Raspuns Sequence List</h5>
+                        <ul>
+                            <li>de pe orice pagina userul gaseste butonul Ajutor, in partea de sus a paginii</li>
+                            <li>userul apasa pe butonul Ajutor</li>
+                        </ul>
+                </section>
+                <section id="SF11-Functional-Requirements">
+                    <h5>5.1.11.3 Dependente Functionale</h5>
+                    <p>
+                        N/A
+                    </p>
+                </section>
+            </section>
+            <section id="SF12">
+                <h4>5.1.12 Download statistici</h4>
+                <section id="Download-statisticiSF">
+                    <h5>5.1.12.1 Descriere & Prioritate</h5>
+                    <p>
+                        Prioritate medie.
+                        Userul poate descarca statisticile aplicatiei in format PDF sau CSV.
+                    </p>
+                </section>
+                <section id="SF12-Stimulus/Response">
+                    <h5>5.1.12.2 Stimul/Raspuns Sequence List</h5>
+                        <ul>
+                            <li>userul ajunge pe pagina tops</li>
+                            <li>userul apasa pe butonul de get PDF sau get CSV, in functie de ce doreste</li>
+                        </ul>
+                </section>
+                <section id="SF12-Functional-Requirements">
+                    <h5>5.1.12.3 Dependente Functionale</h5>
+                    <p>
+                        disponibilitatea librariei fpdf. functionalitatea statisticilor.
+                    </p>
+                </section>
+            </section>
+            <section id="SF13">
+                <h4>5.1.13 View RSS</h4>
+                <section id="View-RSSSF">
+                    <h5>5.1.13.1 Descriere & Prioritate</h5>
+                    <p>
+                        Prioritate medie.
+                        Userul poate vizualiza clasamentul ca flux de date RSS.
+                    </p>
+                </section>
+                <section id="SF13-Stimulus/Response">
+                    <h5>5.1.13.2 Stimul/Raspuns Sequence List</h5>
+                        <ul>
+                            <li>userul vizualizeaza statisticile</li>
+                            <li>userul apasa pe butonul de view RSS de sub unul din rankings</li>
+                        </ul>
+                </section>
+                <section id="SF13-Functional-Requirements">
+                    <h5>5.1.13.3 Dependente Functionale</h5>
+                    <p>
+                        functionalitatea rankingurilor.
+                    </p>
+                </section>
+            </section>
+            <section id="SF14">
+                <h4>5.1.14 View Profile</h4>
+                <section id="View-ProfileSF">
+                    <h5>5.1.14.1 Descriere & Prioritate</h5>
+                    <p>
+                        Prioritate medie.
+                        Userul poate vizualiza diverse informatii legate de propriul cont
+                    </p>
+                </section>
+                <section id="SF14-Stimulus/Response">
+                    <h5>5.1.14.2 Stimul/Raspuns Sequence List</h5>
+                        <ul>
+                            <li>userul intra in cont</li>
+                            <li>de pe orice pagina din acest moment, fara Help si About, userul gaseste butonul Profile in partea de sus a paginii</li>
+                            <li>userul apasa pe butonul Profile</li>
+                        </ul>
+                </section>
+                <section id="SF14-Functional-Requirements">
+                    <h5>5.1.14.3 Dependente Functionale</h5>
+                    <p>
+                        functionalitatea logarii.
+                    </p>
+                </section>
+            </section>
+            <section id="SF15">
+                <h4>5.1.15 Edit Profile</h4>
+                <section id="Edit-ProfileSF">
+                    <h5>5.1.15.1 Descriere & Prioritate</h5>
+                    <p>
+                        Prioritate medie.
+                        Userul poate modifica diverse informatii legate de propriul cont
+                    </p>
+                </section>
+                <section id="SF15-Stimulus/Response">
+                    <h5>5.1.15.2 Stimul/Raspuns Sequence List</h5>
+                        <ul>
+                            <li>userul intra in cont</li>
+                            <li>de pe orice pagina din acest moment, fara Help si About, userul gaseste butonul Profile in partea de sus a paginii</li>
+                            <li>userul apasa pe butonul Profile</li>
+                            <li>userul apasa pe butonul Edit Info</li>
+                        </ul>
+                </section>
+                <section id="SF15-Functional-Requirements">
+                    <h5>5.1.15.3 Dependente Functionale</h5>
+                    <p>
+                        functionalitatea logarii si a paginii profile.
+                    </p>
+                </section>
+            </section>
+            <section id="SF16">
+                <h4>5.1.16 Edit Collection</h4>
+                <section id="Edit-ColSF">
+                    <h5>5.1.16.1 Descriere & Prioritate</h5>
+                    <p>
+                        Prioritate medie.
+                        Userul poate modifica diverse informatii legate de o colectie proprie
+                    </p>
+                </section>
+                <section id="SF16-Stimulus/Response">
+                    <h5>5.1.16.2 Stimul/Raspuns Sequence List</h5>
+                        <ul>
+                            <li>userul intra in una din colectiile proprii</li>
+                            <li>userul apasa pe butoanele de editare aferente numelui si descrierii colectiei</li>
+                        </ul>
+                </section>
+                <section id="SF16-Functional-Requirements">
+                    <h5>5.1.16.3 Dependente Functionale</h5>
+                    <p>
+                        existenta unor colectii proprii in baza de date. functionalitatea logarii si a paginii de vizualizare colectie
+                    </p>
+                </section>
+            </section>
+            <section id="SF17">
+                <h4>5.1.17 Edit Plant</h4>
+                <section id="Edit-PlantSF">
+                    <h5>5.1.17.1 Descriere & Prioritate</h5>
+                    <p>
+                        Prioritate medie.
+                        Userul poate modifica diverse informatii legate de o planta proprie
+                    </p>
+                </section>
+                <section id="SF17-Stimulus/Response">
+                    <h5>5.1.17.2 Stimul/Raspuns Sequence List</h5>
+                        <ul>
+                            <li>userul intra in info-planta a unei plante proprii</li>
+                            <li>userul apasa pe butoanele aferenta editarii numelui si desscrierii plantei</li>
+                        </ul>
+                </section>
+                <section id="SF17-Functional-Requirements">
+                    <h5>5.1.17.3 Dependente Functionale</h5>
+                    <p>
+                        existenta unor plante proprii in baza de date. functionalitatea logarii si paginii info-planta
+                    </p>
+                </section>
+            </section>
+            <section id="SF18">
+                <h4>5.1.18 Change Password</h4>
+                <section id="Change-PasswordSF">
+                    <h5>5.1.18.1 Descriere & Prioritate</h5>
+                    <p>
+                        Prioritate medie.
+                        Userul poate modifica parola contului propriu
+                    </p>
+                </section>
+                <section id="SF18-Stimulus/Response">
+                    <h5>5.1.18.2 Stimul/Raspuns Sequence List</h5>
+                        <ul>
+                            <li>userul intra in cont</li>
+                            <li>de pe orice pagina din acest moment, fara Help si About, userul gaseste butonul Profile in partea stanga a paginii</li>
+                            <li>userul apasa pe butonul Profile</li>
+                            <li>userul apasa pe butonul Change Password</li>
+                        </ul>
+                </section>
+                <section id="SF18-Functional-Requirements">
+                    <h5>5.1.18.3 Dependente Functionale</h5>
+                    <p>
+                        functionalitatea logarii si a paginii profile.
+                    </p>
+                </section>
+            </section>
+            <section id="SF19">
+                <h4>5.1.19 Delete Collection</h4>
+                <section id="DeleteColSF">
+                    <h5>5.1.19.1 Descriere & Prioritate</h5>
+                    <p>
+                        Prioritate medie.
+                        Userul poate sterge o colectie proprie
+                    </p>
+                </section>
+                <section id="SF19-Stimulus/Response">
+                    <h5>5.1.19.2 Stimul/Raspuns Sequence List</h5>
+                        <ul>
+                            <li>userul intra intr-o colectie proprie</li>
+                            <li>usserul apasa pe butonul Delete Collection</li>
+                        </ul>
+                </section>
+                <section id="SF19-Functional-Requirements">
+                    <h5>5.1.19.3 Dependente Functionale</h5>
+                    <p>
+                        existenta unor colectii proprii in baza de date. functionalitatea logarii si a paginii de vizualizare colectie
+                    </p>
+                </section>
+            </section>
+            <section id="SF20">
+                <h4>5.1.20 Delete Plant</h4>
+                <section id="Delete-PlantSF">
+                    <h5>5.1.20.1 Descriere & Prioritate</h5>
+                    <p>
+                        Prioritate medie.
+                        Userul poate sterge o planta proprie
+                    </p>
+                </section>
+                <section id="SF20-Stimulus/Response">
+                    <h5>5.1.20.2 Stimul/Raspuns Sequence List</h5>
+                        <ul>
+                            <li>userul intra in info-planta a unei plante proprii</li>
+                            <li>usserul apasa pe butonul Delete Plant</li>
+                        </ul>
+                </section>
+                <section id="SF20-Functional-Requirements">
+                    <h5>5.1.20.3 Dependente Functionale</h5>
+                    <p>
+                        existenta unor plante proprii in baza de date. functionalitatea logarii si paginii info-planta
+                    </p>
+                </section>
+            </section>
+        </section>
+    </section>
+</body>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tops</title>
+    <script src="tops.js"> </script>
+    <link rel="stylesheet" href="tops.css">
+    <script src="../main/deconectare.js"></script>
+    <script src="../main/search.js"></script>
+
+</head>
+<body>
+    <div class="navbar"> 
+        <div class="logo"> 
+            <img src="Single-Plant-Leaf-Transparent.png" alt="ceva"> 
+            <div class="text"> HeMa</div> 
+        </div>
+        <form  id="srch">
+                
+                <input type="search" id="search" name="search">
+                <button type="submit"></button>
+            
+        </form>
+    </div>
+    <div class="links">
+        <a  href="../profile/profile.html"> Profile</a>
+        <a  href="../colectii/colectie.html"> Collections</a>
+        <a  href="../main/main.html"> Home</a>
+        <a  href="../help/help.html"> Help</a>
+        <a  href="../about/about.html"> About</a>
+        <a  href="../tops/tops.html"> Tops</a>
+        <a  href="../doc/doc.html"> Doc</a>
+        <a href="#" onclick="deconectare()">Deconectare</a>
+    </div>
+    <div class="logoBig">
+        <img src="Single-Plant-Leaf-Transparent.png" alt="ceva"> 
+        <div class="text"> HeMa</div>
+    </div>
+<div class="statistici">
+    <div class="desc">Statistici:</div>
+    <div class="textBox" id='userCount'> Numar useri: X, dintre care X in ultima luna!</div>
+    <div class="textBox" id='plantCount'> Numar plante inregistrare: X, dintre care X in ultima luna!</div>
+    <div class="textBox" id='collectionCount'> Numar colectii totale: X, dintre care X in ultima luna!</div>
+    <div class="textBox" id='plantViews'> Plantele au fost vizionate de X ori, dintre care X in ultima luna!</div>
+    <div class="textBox" id='collectionViews'> Colectiile au fost vizionate de X ori, dintre care X in ultima luna!</div>
+    <button class="but" id='CSV'> get CSV </button>
+    <button class="but" id='PDF'> get PDF </button>
+</div>
+<div class="rankings">
+    <div class="desc"> Rankings:</div>
+    <div class="textBox"> Cele mai mari colectii:</div>
+    <div class="containerList" id="biggestCollections">
+       
+    </div>
+    <button class="but" id="bigColRSS"> view RSS </button>
+    <div class="textBox"> Cele mai multe colectii:</div>
+    <div class="containerList" id="mostCollections"> 
+        
+    </div>
+    <button class="but" id="mostColRSS"> view RSS </button>
+    <div class="textBox"> Cele mai multe plante:</div>
+    <div class="containerList" id="mostPlants"> 
+        
+    </div>
+    <button class="but" id="mostPRSS"> view RSS </button>
+    <div class="textBox"> Cele mai cunoscute plante:</div>
+    <div class="containerList" id="mostViewedP"> 
+       
+    </div>
+    <button class="but" id="mostVPRSS"> view RSS </button>
+    <div class="textBox"> Cele mai cunoscute colectii:</div>
+    <div class="containerList" id="mostViewedC"> 
+    
+    </div>
+    <button class="but" id=mostVCRSS> view RSS </button>
+</div>
+    
+   
+</body>
+</html>

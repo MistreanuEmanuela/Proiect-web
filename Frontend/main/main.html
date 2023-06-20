@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEMA - Main Page</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="deconectare.js"></script>
+    <script src="search.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="navbar"> 
+        <div class="logo"> 
+            <img src="Single-Plant-Leaf-Transparent.png" alt="ceva"> 
+            <div class="text"> HeMa</div> 
+        </div>
+        <form id="srch">
+                
+                <input type="search" id="search" name="search">
+                <button type="submit"></button>
+            
+        </form>
+    </div>
+    <div class="links">
+        <a  href="../profile/profile.html"> Profile</a>
+        <a  href="../colectii/colectie.html"> Collections</a>
+        <a  href="../main/main.html"> Home</a>
+        <a  href="../help/help.html"> Help</a>
+        <a  href="../about/about.html"> About</a>
+        <a  href="../tops/tops.html"> Tops</a>
+        <a  href="../doc/doc.html"> Doc</a>
+        <a href="#" onclick="deconectare()">Deconectare</a>
+    </div>
+    <div class="logoBig">
+        <img src="Single-Plant-Leaf-Transparent.png" alt="ceva"> 
+        <div class="text"> HeMa</div>
+    </div>
+    <div class="descriere" > 
+        <img src="pexels-ylanite-koppens-1906439.jpg" alt="c">
+        <div class="textBox"> Plants <br> Lover
+            <div class="second">Vezi colectiile celorlalti acum
+                 <button class="but" onclick="window.location.href='../search/search_result.html';"> vezi colectii</button>
+            </div>
+        </div>
+    </div>
+    <div class="plante"><div class="desc"> Cele mai populare plante de pe site-ul nostru: </div>
+    <div class="containerPlante" id="plants"> 
+   
+    </div>
+</div>
+</body>
+</html>

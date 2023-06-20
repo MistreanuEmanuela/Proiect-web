@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creare colectie</title>
+    <script src="creare_colectie.js"></script>
+    <script src="../main/deconectare.js"></script>
+    <link rel="stylesheet" href="creare_colectie.css">
+    <script src="../main/search.js"></script>
+</head>
+<body>
+    <div class="navbar"> 
+        <div class="logo"> 
+            <img src="Single-Plant-Leaf-Transparent.png" alt="ceva"> 
+            <div class="text"> HeMa</div> 
+        </div>
+        <form id="srch" class="search">
+                
+                <input type="search" id="search" name="search">
+                <button type="submit"></button>
+            
+        </form>
+    </div>
+    <div class="links">
+        <a  href="../profile/profile.html"> Profile</a>
+        <a  href="../colectii/colectie.html"> Collections</a>
+        <a  href="../main/main.html"> Home</a>
+        <a  href="../help/help.html"> Help</a>
+        <a  href="../about/about.html"> About</a>
+        <a  href="../tops/tops.html"> Tops</a>
+        <a  href="../doc/doc.html"> Doc</a>
+        <a href="#" onclick="deconectare()">Deconectare</a>
+    </div>
+    <div class="adaugare">  
+        <form class="form">
+            <div class="textBox"> 
+                Completati campul pentru a crea o noua colectie in portofliul dumneavoastra:
+            </div>
+            <input type="text" placeholder="Enter Name" name="name" id="name" required>
+            <textarea placeholder="Enter Description" name="desc" id="desc" required></textarea>
+            <button class="but" type="submit" >  Submit </button>
+        </form>
+    </div>  
+</body>
+</html>

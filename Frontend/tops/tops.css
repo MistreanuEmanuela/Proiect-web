@@ -1,0 +1,327 @@
+body{
+    background-image:url('https://images.pexels.com/photos/1470171/pexels-photo-1470171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    font-family: 'Monaco';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height:100%;
+}
+.navbar
+{
+    background-color: #41b267c5;
+    height: 100%;
+    width: 101% ;
+    margin-top:-1%;
+    padding-top: 1%;
+    margin-left: -0.5%;
+    font-family: 'Georgia';
+    display: flex;
+    flex-direction: row;
+}
+.logoBig
+{   
+    font-family: inherit;
+    color: white;
+    text-align: right;
+    text-align: center;
+    width: 100%;  
+    font-size: 80px;
+    height: 70px;
+    text-align: center;
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    justify-content: center;
+}
+.logoBig .text
+{
+    height: 100%;
+    text-align: right;
+    color: black;
+    font-size: 80px;
+    padding-bottom: 1%;
+}
+.logoBig img
+{
+    width: auto;
+    height: 130%;
+    background: none;
+}
+.textBox
+ {
+        align-self: center;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        font-family:inherit;
+        font-weight: bold;
+        position: relative;
+        font-size: 3vw;
+        margin-bottom: 1em;
+        margin-top:1em;
+        font-style:italic;
+ }
+.but
+{
+    font-style:italic;
+    background-color: #41b267cb;
+    color: white;
+    padding-top: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 1%;
+    margin-left:35%;
+    border-radius: 10px;
+    font-size: 2vi;
+}
+.statistici, .rankings
+{
+    margin: 2%;
+    margin-top:5%;
+    width: 96%;
+    background-color: rgba(213, 222, 222, 0.626);
+    height: fit-content;
+    padding-bottom: 5%;
+}
+.statistici .desc, .rankings .desc
+{
+    background-color: #41b267c5;
+    padding: 3%;
+    font-size: 3vi;
+    color:rgb(255, 255, 255);
+}
+.rankings .containerList
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin-top:3%;
+    justify-content: center;
+}
+.rankings .containerList button
+{
+    width: 200px;
+    height: 350px;
+    margin-left:4%;
+    margin-right:4%;
+    margin-bottom: 5%;
+    float: left;
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.rankings .containerList  button:hover
+{
+  color:rgb(35, 131, 72);
+}
+
+.rankings .containerList  button img
+{
+    width: 200px;
+    height:275px;
+
+}
+
+.logo
+{   
+    font-family: inherit;
+    color: white;
+    text-align: right;
+    text-align: center;
+    width: fit-content;  
+    font-size:4vi;
+    height: 4vi;
+    text-align: center;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+}
+.logo .text
+{
+    height: 100%;
+    text-align: right;
+    color: white;
+    font-size: 4vw;
+    padding-bottom: 1%;
+}
+.logo img
+{
+    width: auto;
+    height: 130%;
+    background: none;
+}
+ form
+{
+    color:white;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 1em;
+    margin-left: 15%;
+    margin-right: 1%;
+    height: 80%;
+    display:flex;
+    flex-direction: row;
+    width: 130%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+ form input[type="search"]
+{ 
+    height: 3vi;
+    min-height: 20px;
+    width: 60%;
+    background-color: #ffffffb8;
+}
+form label 
+{
+    width: 150%;
+}
+form button
+{
+    background-image: url('https://www.citypng.com/public/uploads/small/11640084021s7j4kii6hsgshmcxlovq7siag8vktv9rhqscjbbuyse2favmnjhrpjhrgqcug2nqdcpxsmovtjjonzon74knmk3kywi3tpxrpg8r.png');
+    background-size:cover;
+    width: 5%;
+    background-color: transparent;
+}
+  .links
+    {
+        width:85%;
+        height: 100%;
+        margin-top: 1%;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(105, 189, 123, 0.789);
+        width: 100%;
+        padding: 0.5%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 5%;
+        margin-left: -0.5%;
+        align-items: center;
+    }
+    .links a
+    {
+        color:white;
+        text-decoration: none;
+        font-family: inherit;
+        width: fit-content;
+        font-size: 1.5vi;
+        font-size: 3vmin;
+        margin-left: 7%;
+        margin-right: 1%;
+    }
+    .links a:hover
+    {
+        color:black;
+    }
+    .but:hover
+    {
+        color:black;
+    }
+@media screen and (max-width: 650px) {
+    .links a
+    {
+        color:white;
+        text-decoration: none;
+        font-family: inherit;
+        width:fit-content;
+        font-size: 2vi;
+        font-size: 4vmin;
+        margin-left: 6%;
+        margin-right: 1%;
+    }
+    .statistici .desc, .rankings .desc
+    {
+     
+        font-size: 30px;
+        
+    }
+    form input[type="search"]
+    {
+        height: 3vi;
+        min-height: 20px;
+        width: 90%;
+       
+    }
+    form
+    {
+        color:white;
+        text-decoration: none;
+        font-family: inherit;
+        font-size: 1em;
+        margin-left: 15%;
+        margin-right: 1%;
+        height: 80%;
+        display:flex;
+        flex-direction: row;
+        width: 170%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+    .descriere .box-text
+{
+   
+    font-size:6vw;
+   
+}
+.but
+{
+    font-style:italic;
+    background-color: #41b267cb;
+    color: white;
+    padding-top: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 1%;
+    margin-left:25%;
+    border-radius: 10px;
+    font-size: 4vi;
+}
+.butt{
+    font-size: 4vi;
+}
+.descriere .second
+{
+    font-style: normal;
+    font-size:4.5vi;
+     color:black;
+     margin-left:1%;
+     margin-top: 2%;
+}
+.descriere img
+{
+    width: auto;
+    max-width: 50%;
+    height: 100%;
+    max-height: 170px;
+}
+}
+@media screen and (max-width: 1000px) and (min-width: 600px)  {
+    .but
+    {
+        font-size: 2vi;
+    }
+    .descriere .second
+    {
+        font-style: normal;
+        font-size:3vi;
+         color:black;
+         margin-left:1%;
+         margin-top: 2%;
+    }
+    .butt
+    {
+        font-size: 2vi;
+    }
+}
