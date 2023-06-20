@@ -2,7 +2,7 @@
 
 require_once('../Services/vendor/autoload.php');
 
-include_once "../Services/CollectionService.php";
+include_once "../Services/PlantService.php";
 include_once "../Services/TokenService.php";
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     header('Access-Control-Allow-Origin: *');
@@ -19,33 +19,37 @@ $requestMethod = $_SERVER["REQUEST_METHOD"];
 
 $auth = new TokenService();
 
-$service = new CollectionService();
-
+$service = new PlantService();
+file_put_contents('./log.txt', $requestMethod, FILE_APPEND);
 switch ($uri[5]) {
-    case "addcolection":
+    case "planta":
         $jwt = $auth->checkJWTExistance();
         $auth->validateJWT($jwt);
         if ($requestMethod === 'POST') {
-            $data = json_decode(file_get_contents('php://input'), true);
-            $name = $data['name'];
-            $desc = $data['desc'];
-            $userId = $data['userId'];
-            $service->createCollection($name, $desc, $userId);
+            $name = $_POST['name'];
+            $desc = $_POST['desc'];
+            $file = $_FILES['image']['tmp_name'];
+            $collectionId = $_POST['collection'];
+            $color = $_POST['culoare'];
+            $type = $_POST['type'];
+            $zona = $_POST['zona'];
+            $anotimp = $_POST['anotimp'];
+            $service->createPlant($name, $desc, $file, $collectionId, $color, $type, $zona, $anotimp);
         } else {
             header("HTTP/1.1 405 Method Not Allowed");
             exit();
         }
         break;
-    case "colectii":
+    case 'plante':
         $jwt = $auth->checkJWTExistance();
         $auth->validateJWT($jwt);
         $requestType = $uri[6];
         switch ($requestMethod) {
             case 'GET':
                 if ($requestType == 'list')
-                    $service->getCollectionsByUserId();
-                else if ($requestType == "all")
-                    $service->getAllCollection();
+                    $service->getPlantsByCollectionId();
+                else if ($requestType == 'image')
+                    $service->getImageById();
                 else
                     $service->notFoundResponse();
                 break;
@@ -54,67 +58,42 @@ switch ($uri[5]) {
                 break;
         }
         break;
-    case "filtru":
+    case 'info':
         $jwt = $auth->checkJWTExistance();
         $auth->validateJWT($jwt);
-        $requestType = $uri[6];
+        file_put_contents('./log.txt', $requestMethod, FILE_APPEND);
         switch ($requestMethod) {
             case 'GET':
-                if ($requestType == 'culoare')
-                    $service->getCollectionsByCuloare();
+                $requestType = $uri[6];
+                if ($requestType == 'list')
+                    $service->getPlantById();
+                else if ($requestType == 'image')
+                    $service->getImageById();
+                else
+                    $service->getViewCount();
                 break;
-            default:
-                $service->notFoundResponse();
-                break;
-        }
-        break;
-    case 'view':
-        $jwt = $auth->checkJWTExistance();
-        $auth->validateJWT($jwt);
-        switch ($requestMethod) {
-            case 'GET':
-                $service->getViewCount();
+            case 'DELETE':
+                $requestType = $uri[6];
+                if ($requestType == 'delete')
+                    $service->deletePlantByPlantId();
+                else
+                    $service->notFoundResponse();
                 break;
             case 'PUT':
-                $service->incViewCount();
+                file_put_contents('./log.txt', "hi", FILE_APPEND);
+                $service->IncViewCount();
                 break;
             default:
                 $service->notFoundResponse();
                 break;
         }
         break;
-    case "info":
-        $jwt = $auth->checkJWTExistance();
-        $auth->validateJWT($jwt);
-        $CollectionId = $_GET['collectionId'];
-        switch ($requestMethod) {
-            case 'GET':
-                $service->getbyCollectionId($CollectionId);
-                break;
-            default:
-                $service->notFoundResponse();
-                break;
-        }
-
-        break;
-    case 'delete':
-        $jwt = $auth->checkJWTExistance();
-        $auth->validateJWT($jwt);
-        switch ($requestMethod) {
-            case 'DELETE':
-                $service->deleteCollectionById();
-                break;
-            default:
-                $service->notFoundResponse();
-                break;
-        }
-        break;
-    case 'biggest':
+    case 'colectii':
         $jwt = $auth->checkJWTExistance();
         $auth->validateJWT($jwt);
         switch ($requestMethod) {
             case 'GET':
-                $service->getBiggest3();
+                $service->getImageByCollectionId();
                 break;
             default:
                 $service->notFoundResponse();
@@ -126,7 +105,7 @@ switch ($uri[5]) {
         $auth->validateJWT($jwt);
         switch ($requestMethod) {
             case 'GET':
-                $service->getMostViewed3();
+                $service->getMostViewed();
                 break;
             default:
                 $service->notFoundResponse();
@@ -158,15 +137,9 @@ switch ($uri[5]) {
         }
         break;
     case "RSS":
-        $requestType = $uri[6];
         switch ($requestMethod) {
             case 'GET':
-                if ($requestType == 'big')
-                    $service->getTop10BySizeRSS();
-                else if ($requestType == 'view')
-                    $service->getTop10ByViewsRSS();
-                else
-                    $service->notFoundResponse();
+                $service->getTop10ByViewsRSS();
                 break;
             default:
                 $service->notFoundResponse();
