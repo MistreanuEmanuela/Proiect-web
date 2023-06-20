@@ -40,6 +40,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     
     fetch("/Proiect/Backend/Controllers/CollectionController.php/addcolection", requestOptions)
+      .then(response => {
+        if (response.ok) {
+          console.log('Plant deleted successfully');
+          window.location.href = '../colectii/colectie.html';
+        }
+      })
       .catch(error => console.log('error', error));
   });
 
