@@ -40,11 +40,13 @@ class PlantService
         $imagePath = '../Storage/' . $collection . $timestamp . $_FILES['image']['name'];
         move_uploaded_file($_FILES['image']['tmp_name'], $imagePath);
         $statement->bind_param("sssissss", $name, $desc, $imagePath, $collection, $color, $type, $zona, $anotimp);
+        $statement = $this->Db->prepare($query);
+
+        $statement->bind_param("sssissss", $name, $desc, $imagePath, $collection, $color, $type, $zona, $anotimp);
 
         if ($statement->execute()) {
             $plantId = $this->Db->insert_id;
-            
-    
+
             $response = array(
                 'plantId' => $plantId,
                 'message' => 'New plant created successfully'

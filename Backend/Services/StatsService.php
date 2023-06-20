@@ -300,6 +300,7 @@ private $CONFIG;
             echo $response['body'];
         }
     }
+  
     public function getPDF(){
         try{
             $pdf = new FPDF();
@@ -369,4 +370,5 @@ private $CONFIG;
         $response['body'] = json_encode(array("Result" => "Not Found"));
         echo $response['body'];
     }
+   
 }
