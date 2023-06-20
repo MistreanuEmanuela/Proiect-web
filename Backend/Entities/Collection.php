@@ -4,65 +4,66 @@ class Collection
 {
     private $id;
     private $name;
-    private $plantColor;
+    private $userId;
+    private $views;
+    private $description;
 
-    /**
-     * @param $id
-     * @param $name
-     * @param $plantColor
-     */
-    public function __construct($id, $name, $plantColor)
+    public function __construct($id, $name, $userId, $views, $description)
     {
         $this->id = $id;
         $this->name = $name;
-        $this->plantColor = $plantColor;
+        $this->userId = $userId;
+        $this->views = $views;
+        $this->description = $description;
     }
 
-    /**
-     * @return mixed
-     */
     public function getId()
     {
         return $this->id;
     }
 
-    /**
-     * @param mixed $id
-     */
     public function setId($id)
     {
         $this->id = $id;
     }
 
-    /**
-     * @return mixed
-     */
     public function getName()
     {
         return $this->name;
     }
 
-    /**
-     * @param mixed $name
-     */
     public function setName($name)
     {
         $this->name = $name;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getPlantColor()
+    public function getUserId()
     {
-        return $this->plantColor;
+        return $this->userId;
     }
 
-    /**
-     * @param mixed $plantColor
-     */
-    public function setPlantColor($plantColor)
+    public function setUserId($userId)
     {
-        $this->plantColor = $plantColor;
+        $this->userId = $userId;
+    }
+
+    public function getViews()
+    {
+        return $this->views;
+    }
+
+    public function setViews($views)
+    {
+        $this->views = $views;
+    }
+
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    public function setDescription($description)
+    {
+        $this->description = $description;
     }
 }
