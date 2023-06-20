@@ -688,7 +688,7 @@ paths:
                 properties:
                   message:
                     type: string
-  /PlantController.php//info/view:
+  /PlantController.php/info/view:
     get:
       summary: Get plant views by ID
       tags:
