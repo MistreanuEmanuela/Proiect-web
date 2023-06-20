@@ -1,0 +1,259 @@
+body{
+    background-image:url('https://images.pexels.com/photos/1470171/pexels-photo-1470171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    font-family: 'Monaco';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height:100%;
+}
+.navbar
+{
+    background-color: #41b267c5;
+    height: 100%;
+    width: 101% ;
+    margin-top:-1%;
+    padding-top: 1%;
+    margin-left: -0.5%;
+    font-family: 'Georgia';
+    display: flex;
+    flex-direction: row;
+}
+.logoBig
+{   
+    font-family: inherit;
+    color: white;
+    text-align: right;
+    text-align: center;
+    width: 100%;  
+    font-size: 80px;
+    height: 70px;
+    text-align: center;
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    justify-content: center;
+}
+.logoBig .text
+{
+    height: 100%;
+    text-align: right;
+    color: black;
+    font-size: 80px;
+    padding-bottom: 1%;
+}
+.logoBig img
+{
+    width: auto;
+    height: 130%;
+    background: none;
+}
+.logo
+{   
+    font-family: inherit;
+    color: white;
+    text-align: right;
+    text-align: center;
+    width: fit-content;  
+    font-size:4vi;
+    height: 4vi;
+    text-align: center;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+}
+.logo .text
+{
+    height: 100%;
+    text-align: right;
+    color: white;
+    font-size: 4vw;
+    padding-bottom: 1%;
+}
+.logo img
+{
+    width: auto;
+    height: 130%;
+    background: none;
+}
+.container
+{
+    padding-left: 20%;
+    padding-right: 1%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: #b0ababd1;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.accordion {
+    background-color:#88c082b0;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 5vb;
+    transition: .4s;
+}
+.links
+    {
+        width:85%;
+        height: 100%;
+        margin-top: 1%;
+        text-align: center;
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: transparent;
+        width: 100%;  
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1%;
+        margin-left: auto;
+        align-items:end;
+    }
+    .links a
+    {
+        color:white;
+        text-decoration: none;
+        font-family: inherit;
+        width:auto;
+        font-size: 3vw;
+        font-size: 2vw;
+        padding-left: 1%;
+        padding-right: 1%;
+        margin-left: 4%;
+        margin-right: 1%;
+    }
+    .links a:hover
+    {
+        color:black;
+    }
+
+.accordion__active,
+.accordion:hover {
+    background-color: #4d8a46;
+}
+
+.accordion__panel {
+    padding: 0 18px;
+    display: none;
+    background-color: #ffffff9f;
+    overflow: hidden
+}
+
+.accordion__panel--titlu{
+    font-weight: bold;
+    color: rgb(14, 62, 26)
+}
+
+.accordion__panel--text {
+    font-size: medium;
+    font-weight: lighter;
+    color: #00008b
+}
+
+.accordion__title {
+    color: #1a3d1e
+}
+.titlu
+{
+        background-color: hsla(0, 50%, 22%, 0);
+        width: 80%;
+        font-size: 10vb;
+        color:rgba(0, 0, 0, 0.632);
+       
+        font-weight: bold;
+        text-align: center;
+        height: 25%;
+        margin-left:10%;
+        margin-top: 4%;
+}
+.container2
+{
+    background-color: hsla(0, 50%, 22%, 0);
+    font-size: 4vw;
+    color:rgba(0, 0, 0, 0.632);
+    font-weight: bold;
+    text-align: left;
+   padding-top: 1%;
+   padding-bottom: 1%;
+    margin-left: -20%;
+    align-self: center;
+   
+}
+.container2 img
+{
+    width: 5%;
+    height: 5%;
+    margin-bottom: -1%;
+}
+.accordion__panel img
+{
+    width: 75%;
+    height: 75%;
+    margin-left: 10%;
+}
+@media screen and (max-width:1050px) and (min-width: 950px) {
+    .links a
+    {
+        font-size: 3vw;
+        
+    }
+    .accordion
+    {
+        font-size: 4vw;
+    }
+
+}
+@media screen and (max-width: 600px) {
+    .links a
+    {
+        font-size: 4vw;
+        
+    }
+    .logo .text
+    {
+        font-size: 5vw;
+    }
+    .logo img {
+        height: 150%;
+    }
+    .container
+    {
+        padding-left: 1%;
+    }
+    .container2
+    {
+        margin-left:1%;
+    }
+    .accordion {
+        font-size: 4vw;
+    }
+}
+
+@media screen and (max-width: 950px) and (min-width:600px)
+{
+   
+    .links a
+    {
+        font-size: 3vw;
+        
+    }
+    .container
+    {
+        padding-left: 1%;
+    }
+    .container2
+    {
+        margin-left:1%;
+    }
+    .accordion {
+        font-size: 3.5vw;
+    }
+}

@@ -1,0 +1,447 @@
+body{
+    background-image:url('https://images.pexels.com/photos/1470171/pexels-photo-1470171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    font-family: 'Monaco';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height:100%;
+}
+.navbar
+{
+    background-color: #41b267c5;
+    height: 100%;
+    width: 101% ;
+    margin-top:-1%;
+    padding-top: 1%;
+    margin-left: -0.5%;
+    font-family: 'Georgia';
+    display: flex;
+    flex-direction: row;
+}
+.search button
+{
+    background-image: url('https://www.citypng.com/public/uploads/small/11640084021s7j4kii6hsgshmcxlovq7siag8vktv9rhqscjbbuyse2favmnjhrpjhrgqcug2nqdcpxsmovtjjonzon74knmk3kywi3tpxrpg8r.png');
+    background-size:cover;
+    width: 5%;
+    background-color: transparent;
+}
+.logoBig
+{   
+    font-family: inherit;
+    color: white;
+    text-align: right;
+    text-align: center;
+    width: 100%;  
+    font-size: 80px;
+    height: 70px;
+    text-align: center;
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    justify-content: center;
+}
+.logoBig .text
+{
+    height: 100%;
+    text-align: right;
+    color: black;
+    font-size: 80px;
+    padding-bottom: 1%;
+}
+.logoBig img
+{
+    width: auto;
+    height: 130%;
+    background: none;
+}
+.but
+{
+    font-style:italic;
+    background-color: #41b267cb;
+    color: white;
+    padding-top: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 1%;
+    margin-left:35%;
+    border-radius: 10px;
+    font-size: 2vi;
+}
+.nume
+{
+    text-align:center;
+    background-color: #41b267c5;
+    font-family:inherit;
+    font-weight: bold;
+    padding: 3%;
+    font-size: 3vi;
+    color:rgb(255, 255, 255);
+}
+.informatii
+{
+    margin: 2%;
+    margin-top:5%;
+    width: 96%;
+    background-color: rgba(213, 222, 222, 0.626);
+    height: fit-content;
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: center;
+}
+.informatii .descriere
+ {
+    width:100%;
+    font-family:inherit;
+    font-weight: bold;
+    font-size: 2vw;
+    margin-bottom: 1em;
+    margin-top:1em;
+    font-style:italic;
+ }
+.imagine
+{
+    flex-wrap: wrap;
+    width: 50%;
+    height: auto;
+    margin-top:3%;
+    margin-left:3%;
+}
+.informatii .imagine img
+{
+    width: 25vw;
+    height:auto;
+
+}
+.informatii .descriere .element
+{
+    margin:2%;
+    font-size: 2vi;
+}
+.logo
+{   
+    font-family: inherit;
+    color: white;
+    text-align: right;
+    text-align: center;
+    width: fit-content;  
+    font-size:4vi;
+    height: 4vi;
+    text-align: center;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+}
+.logo .text
+{
+    height: 100%;
+    text-align: right;
+    color: white;
+    font-size: 4vw;
+    padding-bottom: 1%;
+}
+.logo img
+{
+    width: auto;
+    height: 130%;
+    background: none;
+}
+ form
+{
+    color:white;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 1em;
+    margin-left: 15%;
+    margin-right: 1%;
+    height: 80%;
+    display:flex;
+    flex-direction: row;
+    width: 130%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+ form input[type="search"]
+{ 
+    height: 3vi;
+    min-height: 20px;
+    width: 60%;
+    background-color: #ffffffb8;
+}
+form label 
+{
+    width: 150%;
+}
+  .links
+    {
+        width:85%;
+        height: 100%;
+        margin-top: 1%;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(105, 189, 123, 0.789);
+        width: 100%;
+        padding: 0.5%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 5%;
+        margin-left: -0.5%;
+        align-items: center;
+    }
+    .links a
+    {
+        color:white;
+        text-decoration: none;
+        font-family: inherit;
+        width: fit-content;
+        font-size: 1.5vi;
+        font-size: 3vmin;
+        margin-left: 7%;
+        margin-right: 1%;
+    }
+    .links a:hover
+    {
+        color:black;
+    }
+    .but:hover
+    {
+        color:black;
+    }
+
+.button-container {
+    display: block; /* Change the display property to block */
+    margin-top: 10px; /* Add some top margin for spacing */
+    margin-bottom: 10px;
+  }
+  
+  .deletebut
+  {
+      font-style:italic;
+      background-color: #ff0000cb;
+      color: white;
+      padding-top: 1%;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-bottom: 1%;
+      margin-left:40%;
+      border-radius: 10px;
+      font-size: 2vi;
+      margin-bottom: 5%;
+  }
+
+  .informatii .descriere .elementdesc
+{
+    margin:2%;
+    margin-top:5%;
+    background-color: aliceblue;
+    color: rgb(0, 0, 0);
+    font-family: inherit;
+    font-weight: bold;
+    align-self: center;
+    margin: 2%;
+    box-sizing: border-box;
+    border: 0.15em solid #848383;
+    background-color: #fffbfb87;
+    border-radius: 7px;
+    font-size: 1.5vw;
+    padding:1%;
+}
+
+.edit 
+{
+   appearance: none;
+    background-color: transparent;
+    border: none;
+   background-image: url("https://cdn-icons-png.flaticon.com/512/1827/1827951.png");
+    background-size: contain;
+    width: 26px;
+    height: 26px;
+   margin-left: 1%;
+
+}
+.edit-container.hidden,
+.edit-containerDesc.hidden {
+  display: none;
+}
+.edit-container, .edit-containerDesc {
+    text-align: left;
+    width: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(253, 253, 253);
+    padding: 20px;
+    border: 1px solid black;
+    z-index: 9999;
+    font-size: 2vi;
+    box-shadow: #848383
+  }
+
+.labeel
+{
+    margin-right: auto;
+    width: 90%;
+    height: 3vw;
+    color: rgb(0, 0, 0);
+    display: inline-flex;
+    font-family: inherit;
+    font-weight: bold;
+    align-self: center;
+    margin: 5%;
+    box-sizing: border-box;
+    border: 0.15em solid #848383;
+    background-color: #fffbfb87;
+    border-radius: 7px;
+    font-size: 1.5vw;
+}
+  
+.error-message {
+    color: red;
+    margin-bottom: 10px;
+  }
+  .error-message2 {
+    color: red;
+    margin-bottom: 10px;
+  }
+.hidden 
+{
+    display: none;
+}  
+.save-button
+{
+    font-style:italic;
+    background-color: #41b267cb;
+    color: white;
+    padding-top: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 1%;
+    margin-left:20%;
+    border-radius: 10px;
+    font-size: 1vi;
+   
+}
+
+.edit-button
+{
+    font-style:italic;
+    background-color: #d71b1bcb;
+    color: white;
+    padding-top: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 1%;
+    margin-left:20%;
+    border-radius: 10px;
+    font-size: 1vi;
+   
+}
+@media screen and (max-width: 650px) {
+    .nume
+{
+
+    font-size: 5vi;
+   
+}
+    .links a
+    {
+        color:white;
+        text-decoration: none;
+        font-family: inherit;
+        width:fit-content;
+        font-size: 2vi;
+        font-size: 4vmin;
+        margin-left: 6%;
+        margin-right: 1%;
+    }
+    .informatii .desc
+    {
+     
+        font-size: 30px;
+        
+    }
+    .informatii .descriere .element
+{
+    margin:2%;
+    font-size: 5vi;
+}
+    form input[type="search"]
+    {
+        height: 3vi;
+        min-height: 20px;
+        width: 90%;
+       
+    }
+    form
+    {
+        color:white;
+        text-decoration: none;
+        font-family: inherit;
+        font-size: 1em;
+        margin-left: 15%;
+        margin-right: 1%;
+        height: 80%;
+        display:flex;
+        flex-direction: row;
+        width: 170%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+    .descriere .box-text
+{
+   
+    font-size:6vw;
+   
+}
+.but
+{
+    font-style:italic;
+    background-color: #41b267cb;
+    color: white;
+    padding-top: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 1%;
+    margin-left:25%;
+    border-radius: 10px;
+    font-size: 4vi;
+}
+
+.informatii .descriere .elementdesc{
+    font-size: 3vi;
+}
+}
+@media screen and (max-width: 1000px) and (min-width: 600px)  {
+    .nume
+    {
+    
+        font-size: 5vi;
+       
+    }
+    .but
+    {
+        font-size: 2vi;
+    }
+    .descriere .second
+    {
+        font-style: normal;
+        font-size:3vi;
+         color:black;
+         margin-left:1%;
+         margin-top: 2%;
+    }
+    .informatii .descriere .element
+{
+    margin:2%;
+    font-size: 3vi;
+}
+.informatii .descriere .elementdesc{
+    font-size: 3vi;
+}
+
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaugare planta</title>
+    <script src="adaugare_planta.js"></script>
+    <script src="../main/deconectare.js"></script>
+    <link rel="stylesheet" href="adaugare_planta.css">
+    <script src="../main/search.js"></script>
+</head>
+<body>
+    <div class="navbar"> 
+        <div class="logo"> 
+            <img src="Single-Plant-Leaf-Transparent.png" alt="ceva"> 
+            <div class="text"> HeMa</div> 
+        </div>
+        <form  id="srch" class="search">
+                <input type="search" id="search" name="search">
+                <button type="submit"></button>
+            
+        </form>
+    </div>
+    <div class="links">
+        <a  href="../profile/profile.html"> Profile</a>
+        <a  href="../colectii/colectie.html"> Collections</a>
+        <a  href="../main/main.html"> Home</a>
+        <a  href="../help/help.html"> Help</a>
+        <a  href="../about/about.html"> About</a>
+        <a  href="../tops/tops.html"> Tops</a>
+        <a  href="../doc/doc.html"> Doc</a>
+        <a href="#" onclick="deconectare()">Deconectare</a>
+    </div>
+    <div class="adaugare">  
+        <form class="form" enctype="multipart/form-data">
+            <div class="textBox"> 
+                Completati urmatoarele campuri pentru a adauga o noua planta in colectia dumneavoastra:
+            </div>
+            <input type="text" placeholder="Enter Name" name="name" id="name" required>
+            <textarea placeholder="Enter Description" name="desc" id="desc" required></textarea>
+            <div class="Image">
+                Image:
+                <input type="file" name="image" id="image" required>
+            </div>
+            
+                <select name="color" id="color" class="select">
+                    <option value="default"> choose a color</option>
+                    <option value="rosu">rosu</option>
+                    <option value="galben">galben</option>
+                    <option value="albastru">albastru</option>
+                    <option value="portocalie">portocalie</option>
+                    <option value="verde">verde</option>
+                    <option value="alba">alba</option>
+                    <option value="roz">roz</option>
+                    <option value="lila">lila</option>
+                </select>
+          
+                <select name="tip" id="tip" class="select">
+                    <option value="default"> choose a type</option>
+                    <option value="medicinala">medicinala</option>
+                    <option value="feriga">feriga</option>
+                    <option value="carnivor">carnivora</option>
+                    <option value="suculent">suculenta</option>
+                    <option value="aromatice">aromatice</option>
+                </select>
+           
+                <select name="zona" id="zona" class="select">
+                    <option value="default"> choose a zone</option>
+                    <option value="montana">montana</option>
+                    <option value="ecuatoriala">ecuatoriala</option>
+                    <option value="mlastina">mlastina</option>
+                    <option value="desertica">desertica</option>
+                    <option value="jungla">jungla</option>
+                </select>
+            
+                <select name="anotimp" id="anotimp" class="select" >
+                    <option value="default"> choose an anotimp</option>
+                    <option value="primavara">primavara</option>
+                    <option value="vara">vara</option>
+                    <option value="toamna">toamna</option>
+                    <option value="iarna">iarna</option>
+                    <option value="allseason">allseason</option>
+                </select>
+              
+            <button class="but" type="submit">Submit</button>
+        </form>
+    </div>  
+</body>
+</html>

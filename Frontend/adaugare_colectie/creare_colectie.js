@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     var name = document.getElementById('name').value;
@@ -17,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
     var headers = new Headers();
     headers.append('Authorization', 'Bearer ' + token);
     headers.append('Content-Type', 'application/json');
+    const decodedToken = decodeJwt(token);
     const userId = decodedToken.userId;
-
     var data = {
       name: name,
       desc: desc,
@@ -54,3 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
     return null;
   }
 });
+function decodeJwt(token) {
+  const base64Url = token.split('.')[1]; 
+  const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/'); 
+  const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2); 
+  }).join(''));
+
+  return JSON.parse(jsonPayload); 
+}

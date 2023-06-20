@@ -1,0 +1,375 @@
+body{
+    background-image:url('https://images.pexels.com/photos/1470171/pexels-photo-1470171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    font-family: 'Monaco';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height:100%;
+}
+.navbar
+{
+    background-color: #41b267c5;
+    height: 100%;
+    width: 101% ;
+    margin-top:-1%;
+    padding-top: 1%;
+    margin-left: -0.5%;
+    font-family: 'Georgia';
+    display: flex;
+    flex-direction: row;
+}
+.but
+{
+    font-style:italic;
+    background-image: none;
+    background-color: #41b267cb;
+    color: white;
+    padding-top: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 1%;
+    align-self: center;
+    border-radius: 10px;
+    font-size: 1vw;
+    margin-top: 2%;
+}
+.but:hover
+{
+    color:black;
+}
+.logo
+{   
+    font-family: inherit;
+    color: white;
+    text-align: right;
+    text-align: center;
+    width: fit-content;  
+    font-size:4vi;
+    height: 4vi;
+    text-align: center;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+}
+.logo .text
+{
+    height: 100%;
+    text-align: right;
+    color: white;
+    font-size: 4vw;
+    padding-bottom: 1%;
+}
+.logo img
+{
+    width: auto;
+    height: 130%;
+    background: none;
+}
+.adaugare
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    font-style:italic;
+    margin-left: -0.5%;
+}
+.adaugare .form
+ {
+    background-color: rgba(200, 206, 206, 0.626);
+    width: 60%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-left: 5%;
+    padding-bottom:2%;
+ }  
+
+ .form .textBox
+ {
+        align-self: center;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        font-family:inherit;
+        font-weight: bold;
+        position: relative;
+        font-size: 2vw;
+        margin-bottom: 1em;
+        margin-top:1em;
+ }
+ .search input[type=text]{
+    width: 80%;
+    height: auto;
+    color: rgb(0, 0, 0);
+    display: inline-flex;
+    font-family: inherit;
+    font-weight: bold;
+    align-self: center;
+    margin: 2%;
+    box-sizing: border-box;
+    border: 0.15em solid #848383;
+    background-color: #fffbfb87;
+    border-radius: 7px;
+    font-size: 1.5vw;
+  }
+ .form input[type=text] {
+    width: 80%;
+    height: auto;
+    color: rgb(0, 0, 0);
+    display: inline-flex;
+    font-family: inherit;
+    font-weight: bold;
+    align-self: center;
+    margin: 2%;
+    box-sizing: border-box;
+    border: 0.15em solid #848383;
+    background-color: #fffbfb87;
+    border-radius: 7px;
+    font-size: 1.5vw;
+  }
+  .form textarea{
+    width: 80%;
+    height: auto;
+    color: rgb(0, 0, 0);
+    display: inline-flex;
+    font-family: inherit;
+    font-weight: bold;
+    align-self: center;
+    margin: 2%;
+    box-sizing: border-box;
+    border: 0.15em solid #848383;
+    background-color: #fffbfb87;
+    border-radius: 7px;
+    font-size: 1.5vw;
+  }
+  .form input[type=file]{
+    width: 100%;
+    color: #848383;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-weight: bold;
+    border: 0.15em solid #848383;
+    background-color: #fffbfb87;
+    border-radius: 7px;
+    margin-left:2%;
+    font-size: 1.5vw;
+  }
+  .form .Image{
+    width: 80%;
+    height: auto;
+    color: rgb(0, 0, 0);
+    display: inline-flex;
+    font-family: inherit;
+    font-weight: bold;
+    align-self: center;
+    margin: 2%;
+    font-size: 2vw;
+  }
+ .search{
+    color:white;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 1em;
+    margin-left: 15%;
+    margin-right: 1%;
+    height: 80%;
+    display:flex;
+    flex-direction: row;
+    width: 130%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.search input[type="search"]
+{ 
+    height: 3vi;
+    min-height: 20px;
+    width: 60%;
+    background-color: #ffffffb8;
+}
+.search label 
+{
+    width: 150%;
+}
+.search button
+{
+    background-image: url('https://www.citypng.com/public/uploads/small/11640084021s7j4kii6hsgshmcxlovq7siag8vktv9rhqscjbbuyse2favmnjhrpjhrgqcug2nqdcpxsmovtjjonzon74knmk3kywi3tpxrpg8r.png');
+    background-size:cover;
+    width: 5%;
+    background-color: transparent;
+}
+  .links
+    {
+        width:85%;
+        height: 100%;
+        margin-top: 1%;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(105, 189, 123, 0.789);
+        width: 100%;
+        padding: 0.5%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 5%;
+        margin-left: -0.5%;
+        align-items: center;
+    }
+    .links a
+    {
+        color:white;
+        text-decoration: none;
+        font-family: inherit;
+        width: fit-content;
+        font-size: 1.5vi;
+        font-size: 3vmin;
+        margin-left: 6.5%;
+        margin-right: 1%;
+    }
+    .links a:hover
+    {
+        color:black;
+    }
+    .but:hover
+    {
+        color:black;
+    }
+    .select
+{
+    width: 80%;
+    height: auto;
+    color: rgb(0, 0, 0);
+    display: inline-flex;
+    font-family: inherit;
+    font-weight: bold;
+    align-self: center;
+    margin: 2%;
+    box-sizing: border-box;
+    border: 0.15em solid #848383;
+    background-color: #fffbfb87;
+    border-radius: 7px;
+    font-size: 1.5vw;
+}
+@media screen and (max-width: 600px) {
+    .links a
+    {
+        color:white;
+        text-decoration: none;
+        font-family: inherit;
+        width:fit-content;
+        font-size: 2vi;
+        font-size: 4vmin;
+        margin-left: 6%;
+        margin-right: 1%;
+    }
+    .plante .desc
+    {
+     
+        font-size: 30px;
+        
+    }
+    .search input[type="search"]
+    {
+        height: 3vi;
+        min-height: 20px;
+        width: 90%;
+       
+    }
+    .search
+    {
+        color:white;
+        text-decoration: none;
+        font-family: inherit;
+        font-size: 1em;
+        margin-left: 15%;
+        margin-right: 1%;
+        height: 80%;
+        display:flex;
+        flex-direction: row;
+        width: 170%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+    .descriere .box-text
+{
+   
+    font-size:6vw;
+   
+}
+
+.adaugare .form
+{
+
+   width: 80%;
+
+} 
+.form textarea{
+   font-size: 3vw;
+}
+.form input[type=text]{
+   font-size: 3vw;
+}
+.form .textBox
+{
+
+       font-size: 3vw;
+
+}
+input [type=file]
+{
+    font-size: 3vw;
+}
+.select
+{
+    font-size: 3vw;
+}
+.but
+{
+  
+    font-size: 3vi;
+}
+.descriere .second
+{
+    font-style: normal;
+    font-size:4.5vi;
+     color:black;
+     margin-left:1%;
+     margin-top: 2%;
+}
+.descriere img
+{
+    width: auto;
+    max-width: 50%;
+    height: 100%;
+    max-height: 170px;
+}
+}
+@media screen and (max-width: 1000px) and (min-width: 600px)  {
+    .descriere .textBox
+    {
+        font-style:italic;
+        padding-left: 2%;
+        padding-top: 1%;
+        font-size:4vi;
+        color:black;
+        width:100%;
+    }
+    .but
+    {
+        font-size: 2vi;
+    }
+    .descriere .second
+    {
+        font-style: normal;
+        font-size:3vi;
+         color:black;
+         margin-left:1%;
+         margin-top: 2%;
+    }
+}
+
