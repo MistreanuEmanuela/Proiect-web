@@ -259,10 +259,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   function deleteCollection() {
-    const confirmed = confirm('Are you sure you want to delete this plant?');
+    const confirmed = confirm('Are you sure you want to delete this collection?');
 
     if (confirmed) {
-      fetch(`/Proiect/Backend/Controllers/PlantController.php/plante/delete?collectionId=${collection.id}`, {
+      fetch(`/Proiect/Backend/Controllers/CollectionController.php/delete?collectionId=${collection.id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': 'Bearer ' + token,
