@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaugare planta</title>
+    <script src="inregistrare.js"></script>
+    <link rel="stylesheet" href="inregistrare.css">
+</head>
+<body>
+    <div class="navbar"> 
+        <div class="logo"> 
+            <img src="Single-Plant-Leaf-Transparent.png" alt="ceva"> 
+            <div class="text"> HeMa</div>
+        </div>
+        <div class="links"> 
+            <a href="../help/help.html"> Help </a>
+            <a href="../about/about.html"> About </a>
+        </div>
+    </div>
+    <div class="adaugare">  
+        <form class="form" >
+            <div class="textBox"> 
+                Completati urmatoarele campuri pentru a crea un nou cont:
+            </div>
+            <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+            <input type="email" placeholder="Enter E-mail" name="email" id="email" required>
+            <input type="text" placeholder="Enter Password" name="password" id="password" required>
+            <input type="text" placeholder="Confirm Password" name="conf_pass" id="conf_pass" required>
+            <input type="text" placeholder="Lastname (optional)" name="lastname" id="lastname">
+            <input type="text" placeholder="Firstname (optional)" name="firstname" id="firstname">
+            <button class="but" type="submit">  Submit </button>
+            <div id="error-container"></div>
+        </form>
+    </div>  
+</body>
+</html>

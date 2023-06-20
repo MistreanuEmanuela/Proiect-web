@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adaugare planta</title>
+  <link rel="stylesheet" href="profile.css">
+  <script src="profile.js"></script>
+  <script src="../main/deconectare.js"></script>
+  <script src="../main/search.js"></script>
+
+
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <img src="Single-Plant-Leaf-Transparent.png" alt="ceva">
+      <div class="text"> HeMa</div>
+    </div>
+    <form class="search" id="srch">
+
+      <input type="search" id="search" name="search">
+      <button type="submit"></button>
+
+    </form>
+  </div>
+  <div class="links">
+    <a  href="../profile/profile.html"> Profile</a>
+    <a  href="../colectii/colectie.html"> Collections</a>
+    <a  href="../main/main.html"> Home</a>
+    <a  href="../help/help.html"> Help</a>
+    <a  href="../about/about.html"> About</a>
+    <a  href="../tops/tops.html"> Tops</a>
+    <a  href="../doc/doc.html"> Doc</a>
+    <a href="#" onclick="deconectare()">Deconectare</a>
+</div>
+  <div class="logoBig">
+    <img src="Single-Plant-Leaf-Transparent.png" alt="ceva">
+    <div class="text"> HeMa</div>
+  </div>
+  <div class="uname"></div>
+  <div class="informatii">
+    <div class="lista">
+      <div class="email"></div>
+      <div class="lastname"></div>
+      <div class="firstname"></div>
+    </div>
+    <div class="imagine">
+      <img src="p1.png" alt="ceva">
+    </div>
+  </div>
+  <button class="edit-button">Edit Info</button>
+  <div class="edit-container hidden">
+    <div class="edit-fields">
+      <label for="edit-firstname">First Name:</label>
+      <input type="text" id="edit-firstname" class="labeel" name="edit-firstname">
+    </div>
+    <div class="edit-fields">
+      <label for="edit-lastname">Last Name:</label>
+      <input type="text" id="edit-lastname" class="labeel" name="edit-lastname">
+    </div>
+    <button class="save-button">Save</button>
+  </div>
+  <button class="change-password-button">Change Password</button>
+  <div class="change-password-container hidden">
+    <div class="change-password-fields">
+
+      <input type="password" id="current-password" class="labeel2" name="current-password"
+        placeholder="Current password">
+
+      <div class="change-password-fields">
+
+        <input type="password" id="new-password" class="labeel2" name="new-password" placeholder="New password">
+      </div>
+      <div class="change-password-fields">
+        <input type="password" id="confirm-new-password" class="labeel2" name="confirm-new-password"
+          placeholder="Confirm your new password">
+      </div>
+      <div class="error-message hidden"></div>
+      <button class="save-password-button">Save</button>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

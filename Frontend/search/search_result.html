@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Search</title>
+    <link rel="stylesheet" href="search_result.css">
+    <script src="search.js"> </script>
+    <script src="../main/deconectare.js"></script>
+    <script src="../main/search.js"></script>
+
+
+    </head>
+<body>
+    <div class="navbar"> 
+        <div class="logo"> 
+            <img src="Single-Plant-Leaf-Transparent.png" alt="ceva"> 
+            <div class="text"> HeMa</div> 
+        </div>
+        <form  id="srch">
+                
+                <input type="search" id="search" name="search">
+                <button type="submit"></button>
+            
+        </form>
+    </div>
+    <div class="links">
+        <a  href="../profile/profile.html"> Profile</a>
+        <a  href="../colectii/colectie.html"> Collections</a>
+        <a  href="../main/main.html"> Home</a>
+        <a  href="../help/help.html"> Help</a>
+        <a  href="../about/about.html"> About</a>
+        <a  href="../tops/tops.html"> Tops</a>
+        <a  href="../doc/doc.html"> Doc</a>
+        <a href="#" onclick="deconectare()">Deconectare</a>
+    </div>
+    <div class="logoBig">
+        <img src="Single-Plant-Leaf-Transparent.png" alt="ceva"> 
+        <div class="text"> HeMa</div>
+    </div>
+
+<div class="plante"><div class="desc"> Rezultatele cautarii plante:  
+    <span id="color"></span>
+    <span id="anotimp"></span>
+    <span id="inaltime"></span>
+    <span id="regiune"></span>
+</div>
+<div class="result">
+<form class="formular"> 
+   
+<div class="filt">
+    <div class="filtru">Culoare:</div>
+    
+    <label><input type="radio" name="color" value="rosu">rosu</label>
+    <label><input type="radio" name="color" value="galben">galben</label>
+    <label><input type="radio" name="color" value="albastru">albastru</label>
+    <label><input type="radio" name="color" value="portocalie">portocalie</label>
+    <label><input type="radio" name="color" value="verde">verde</label>
+    <label><input type="radio" name="color" value="alba">alba</label>
+    <label><input type="radio" name="color" value="roz">roz</label>
+    <label><input type="radio" name="color" value="lila">lila</label>
+</div>
+
+<div class="filt">
+    <div class="filtru">Tipul plantei:</div>
+    
+    <label><input type="radio" name="tip" value="medicinala">medicinala</label>
+    <label><input type="radio" name="tip" value="feriga">feriga</label>
+    <label><input type="radio" name="tip" value="carnivor">carnivora</label>
+    <label><input type="radio" name="tip" value="suculent">suculenta</label>
+    <label><input type="radio" name="tip" value="aromatice">aromatice</label>
+  </div>
+  <div class="filt">
+    <div class="filtru">Zona: </div>
+
+    <label><input type="radio" name="zona" value="montana">montana</label>
+    <label><input type="radio" name="zona" value="ecuatoriala">ecuatoriala </label>
+    <label><input type="radio" name="zona" value="mlastina">mlastina </label>
+    <label><input type="radio" name="zona" value="desertica">desertica </label>
+    <label><input type="radio" name="zona" value="jungla">jungla </label>
+</div>
+
+
+<div class="filt">
+    <div class="filtru">Anotimpul:</div>
+    
+    <label><input type="radio" name="anotimp" value="primavara">primavara </label>
+    <label><input type="radio" name="anotimp" value="vara">vara </label>
+    <label><input type="radio" name="anotimp" value="iarna">iarna</label> 
+    <label><input type="radio" name="anotimp" value="toamna">toamna</label> 
+    <label><input type="radio" name="anotimp" value="allseason">allseason </label>
+ </div>
+
+    <button type="submit" > Filtreaza</button>
+</form>
+<div class="containerPlante" id="containerPlante"> </div>
+
+    </div>
+</div>
+</body>
+</html>

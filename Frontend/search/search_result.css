@@ -1,0 +1,492 @@
+body{
+    background-image:url('https://images.pexels.com/photos/1470171/pexels-photo-1470171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    font-family: 'Monaco';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height:100%;
+}
+.navbar
+{
+    background-color: #41b267c5;
+    height: 100%;
+    width: 101% ;
+    margin-top:-1%;
+    padding-top: 1%;
+    margin-left: -0.5%;
+    font-family: 'Georgia';
+    display: flex;
+    flex-direction: row;
+}
+.logoBig
+{   
+    font-family: inherit;
+    color: white;
+    text-align: right;
+    text-align: center;
+    width: 100%;  
+    font-size: 80px;
+    height: 70px;
+    text-align: center;
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    justify-content: center;
+}
+.logoBig .text
+{
+    height: 100%;
+    text-align: right;
+    color: black;
+    font-size: 80px;
+    padding-bottom: 1%;
+}
+.logoBig img
+{
+    width: auto;
+    height: 130%;
+    background: none;
+}
+.logo
+{   
+    font-family: inherit;
+    color: white;
+    text-align: right;
+    text-align: center;
+    width: fit-content;  
+    font-size:4vi;
+    height: 4vi;
+    text-align: center;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+}
+.logo .text
+{
+    height: 100%;
+    text-align: right;
+    color: white;
+    font-size: 4vw;
+    padding-bottom: 1%;
+}
+.logo img
+{
+    width: auto;
+    height: 130%;
+    background: none;
+}
+form
+{
+    color:white;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 1em;
+    margin-left: 15%;
+    margin-right: 1%;
+    height: 80%;
+    display:flex;
+    flex-direction: row;
+    width: 130%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+ form input[type="search"]
+{ 
+    height: 3vi;
+    min-height: 20px;
+    width: 60%;
+    background-color: #ffffffb8;
+}
+form label 
+{
+    width: 150%;
+}
+form button
+{
+    background-image: url('https://www.citypng.com/public/uploads/small/11640084021s7j4kii6hsgshmcxlovq7siag8vktv9rhqscjbbuyse2favmnjhrpjhrgqcug2nqdcpxsmovtjjonzon74knmk3kywi3tpxrpg8r.png');
+    background-size:cover;
+    width: 5%;
+    background-color: transparent;
+}
+  .links
+    {
+        width:85%;
+        height: 100%;
+        margin-top: 1%;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(105, 189, 123, 0.789);
+        width: 100%;
+        padding: 0.5%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 5%;
+        margin-left: -0.5%;
+        align-items: center;
+    }
+    .links a
+    {
+        color:white;
+        text-decoration: none;
+        font-family: inherit;
+        width: fit-content;
+        font-size: 1.5vi;
+        font-size: 3vmin;
+        margin-left: 7%;
+        margin-right: 1%;
+    }
+    .links a:hover
+    {
+        color:black;
+    }
+.plante
+{
+    margin: 2%;
+    margin-top:5%;
+    width: 95%;
+    background-color: rgba(213, 222, 222, 0.626);
+    height: fit-content;
+   
+}
+.plante .desc
+{
+    padding: 3%;
+    font-size: 3vi;
+    color:black;
+    background-color: rgba(105, 189, 123, 0.789);
+    margin-bottom: 2%;
+}
+.plante .containerPlante
+{ 
+    margin-left:2%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+ 
+    height: auto;
+    justify-content: center;
+    padding-left: 2%;
+    padding-right: 2%;
+       width: 80%;
+}
+.result
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.plante .result form
+{
+    appearance: none;
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    color: rgb(49, 46, 46);
+    flex-direction: column;
+    font-size: 1.5vw;
+    padding: 2%;
+    background-color: rgba(105, 189, 123, 0.789);
+}
+.filt
+{
+    display: flex;
+    flex-direction: column;
+}
+.plante .result  form  .filt label
+{
+    width: 100%;
+    margin-left: 20%;
+}
+.plante .colectie
+{
+  
+    padding-top: 2%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(176, 176, 176, 0.729);
+    margin-bottom: 5%;
+    padding-bottom: 1%;
+}
+.plante .colectie .descriereColectie
+{
+    font-size: 1.5vw;
+    width: 60%;
+    text-align: center;
+    height: fit-content;
+}
+.filtru
+{
+    margin-bottom:10%;
+    text-align: center;
+    font-size: 1.7vw;
+    color:rgb(0, 0, 0);
+    background-color: rgb(212, 195, 146);
+    padding: 1%;
+    font-family: inherit;
+    font-weight: bold;
+    margin: 2%;
+    box-sizing: border-box;
+    border: 0.15em solid #848383;
+    border-radius: 7px;
+}
+.plante .containerPlante button
+{
+    
+    width: 180px;
+    height: 270px;
+    margin-left:4%;
+    margin-right:4%;
+    margin-bottom: 1%;
+    float: left;
+    position: relative;
+    font-size: 40px;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding-top: 0.5%;
+    margin-top:2%;
+}
+.plante .containerPlante button:hover
+{
+  background-color:  #41b267c5;
+}
+
+.plante .containerPlante button img
+{
+    width: 160px;
+    height: 250px;
+}
+.plante .result form button
+
+{
+    background-image: none;
+    font-style:italic;
+    background-color: #42925ccb;
+    color: white;
+
+    padding: 3%;
+    align-self: center;
+    border-radius: 10px;
+    font-size: 1.8vw;
+    width: fit-content;
+    margin-top: 10%;
+    cursor: pointer;
+}
+.numePlanta
+{
+    font-size: 2vi;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+.caractPlanta
+{
+    font-size: 1.5vi;
+    text-align: center;
+    font-weight: bold;
+}
+    @media screen and (max-width: 650px) {
+        .links a
+        {
+            color:white;
+            text-decoration: none;
+            font-family: inherit;
+            width:fit-content;
+            font-size: 2vi;
+            font-size: 4vmin;
+            margin-left: 6%;
+            margin-right: 1%;
+        }
+        .plante .desc
+        {
+         
+            font-size: 30px;
+            
+        }
+        form input[type="search"]
+        {
+            height: 3vi;
+            min-height: 20px;
+            width: 90%;
+           
+        }
+        form
+        {
+            color:white;
+            text-decoration: none;
+            font-family: inherit;
+            font-size: 1em;
+            margin-left: 15%;
+            margin-right: 1%;
+            height: 80%;
+            display:flex;
+            flex-direction: row;
+            width: 100%;
+            margin-top: 1%;
+            margin-bottom: 1%;
+        }
+        .plante .result
+        {
+            flex-direction: column;
+        }
+        .plante .result form .filtru
+        {
+            font-size: 4vw;
+            margin-bottom: 2%;
+        }
+        .plante .result form .filt
+        {     
+            flex-direction: row;
+            flex-wrap:wrap;
+        }
+        .plante .result form .filt label
+        {          
+            margin-left: 0%;
+            width: auto;
+            font-size: 3vw;
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .plante .result form 
+        {
+            font-size: 4vw;
+            width: auto;
+        }
+        .plante .result form button{
+          margin-top: 3%;
+          font-size: 3vw;
+        }
+        .plante .result .containerPlante
+        {
+            width: auto;
+            margin-left: 1%;
+        }
+        .plante .result .containerPlante .colectie .descriereColectie
+        {
+            font-size: 3vw;
+            margin-top: 5%;
+        }
+        .numePlanta
+{
+    font-size: 3vi;
+
+}
+    
+.caractPlanta
+{
+    font-size: 2.5vi;
+  
+    }
+    .plante .containerPlante button img
+{
+    width: 150px;
+    height: 200px;
+}
+}
+    @media screen and (max-width: 1200px) and (min-width:800px) {
+        .plante .colectie .descriereColectie {
+        font-size:2.2vw;
+        }
+        .plante .result form 
+        {
+            font-size: 2vw;
+        }
+        .plante .containerPlante button img
+{
+    width: 150px;
+    height: 200px;
+}
+    }
+    @media screen and (max-width: 800px) and (min-width:650px) {
+        .plante .result
+        {
+            flex-direction: column;
+        }
+        .plante .result form .filtru
+        {
+            font-size: 3.5vw;
+            margin-bottom: 2%;
+        }
+        .plante .result form .filt
+        {
+            text-align:center;
+            flex-direction: row;
+            flex-wrap:wrap;
+        }
+        .plante .result form .filt label
+        { 
+            margin-left: 0%;
+            width: fit-content;
+            font-size: 3vw;
+            display:flex;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .plante .result form 
+        {
+            font-size: 4vw;
+            width: auto;
+        }
+        .plante .result form button{
+          margin-top: 3%;
+          font-size: 3vw;
+        }
+        .plante .result .containerPlante
+        {
+            width: auto;
+            margin-left: 1%;
+        }
+        .plante .result .containerPlante .colectie .descriereColectie
+        {
+            font-size: 3vw;
+            margin-top: 5%;
+        }
+        .plante .containerPlante button img
+{
+    width: 150px;
+    height: 200px;
+}
+    }
+.filtru
+{
+    background-color: rgb(212, 195, 146);
+    text-align: left;
+    padding: 1%;
+    color: rgb(0, 0, 0);
+    font-family: inherit;
+    font-weight: bold;
+    margin: 2%;
+    box-sizing: border-box;
+    border: 0.15em solid #848383;
+    border-radius: 7px;
+}    
+.not 
+{
+    color:red;
+    font-size: 3vi;
+    text-align: center;
+}
+@media screen and (max-width: 450px) {
+    .numePlanta
+    {
+        font-size: 4vi;
+    
+    }
+        
+    .caractPlanta
+    {
+        font-size: 3.5vi;
+      
+        }
+    }
