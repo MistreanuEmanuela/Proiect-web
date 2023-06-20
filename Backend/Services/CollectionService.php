@@ -128,7 +128,7 @@ class CollectionService
                     JOIN collectiontags AS ct3 ON ct3.collectionId = collections.id AND ct3.tag = ?
                 ");
                 $statement->bind_param("sss", $c, $a, $r);
-            } elseif ($c !== 'c' && $a === 'a' && $r === 'r' && $i !== 'i') {
+            } elseif ($c !== 'c' && $a !== 'a' && $r === 'r' && $i !== 'i') {
                 $statement = $this->Db->prepare("
                     SELECT collections.id, collections.name, collections.views, collections.userId,
                     users.lastName, users.firstName
@@ -150,6 +150,17 @@ class CollectionService
                     JOIN collectiontags AS ct3 ON ct3.collectionId = collections.id AND ct3.tag = ?
                 ");
                 $statement->bind_param("sss", $a, $r, $i);
+            } elseif ($c !== 'c' && $a === 'a' && $r !== 'r' && $i !== 'i') {
+                $statement = $this->Db->prepare("
+                    SELECT collections.id, collections.name, collections.views, collections.userId,
+                    users.lastName, users.firstName
+                    FROM collections
+                    JOIN users ON collections.userId = users.id
+                    JOIN collectiontags AS ct1 ON ct1.collectionId = collections.id AND ct1.tag = ?
+                    JOIN collectiontags AS ct2 ON ct2.collectionId = collections.id AND ct2.tag = ?
+                    JOIN collectiontags AS ct3 ON ct3.collectionId = collections.id AND ct3.tag = ?
+                ");
+                $statement->bind_param("sss", $c, $r, $i);
             } elseif ($c !== 'c' && $a !== 'a' && $r === 'r' && $i === 'i') {
                 $statement =
                     $this->Db->prepare("
