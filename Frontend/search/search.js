@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = '../sign/sign.html';
       }
       }
+  
     var headers = new Headers();
     headers.append('Authorization', 'Bearer ' + token);
     headers.append('Content-Type', 'application/json');
@@ -100,10 +101,12 @@ document.addEventListener('DOMContentLoaded', () => {
     var form = document.querySelector('.formular');
     form.addEventListener('submit', function (event) {
         event.preventDefault();
+
         var colorGen = document.querySelector('input[name="color"]:checked');
         var anotimpGen = document.querySelector('input[name="anotimp"]:checked');
         var tipGen = document.querySelector('input[name="tip"]:checked');
         var regiuneGen = document.querySelector('input[name="regiune"]:checked');
+
         color = colorGen ? colorGen.value : "c";
         anotimp = anotimpGen ? anotimpGen.value : "a";
         tip = tipGen ? tipGen.value : "i";
@@ -226,15 +229,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 inaltimeResult.innerHTML = `  ${tip}`;
             if (regiune != 'r')
                 regiuneResult.innerHTML = `  ${regiune}`;
-        colorGen = colorGen ? colorGen.id : '';
-        anotimpGen = anotimpGen ? anotimpGen.id : '';
-        tipGen = tipGen ? tipGen.id : "";
-        regiuneGen = regiuneGen ? regiuneGen.id : "";
+
+        colorGen = colorGen ? get_Eng(colorGen.value) : '';
+        anotimpGen = anotimpGen ? get_Eng(anotimpGen.value) : '';
+        tipGen = tipGen ? get_Eng(tipGen.value) : "";
+        regiuneGen = regiuneGen ? get_Eng(regiuneGen.value) : "";
+        
         console.log(colorGen);
         console.log(anotimpGen);
         console.log(tipGen);
         console.log(regiuneGen);
-        document.getElementById('but').addEventListener('click',function(){
+
+
+
+        const button=document.getElementById('but'); 
+        button.addEventListener('click',function(){
             var cukie = {
                 color: colorGen,
                 anotimp: anotimpGen,
@@ -247,8 +256,11 @@ document.addEventListener('DOMContentLoaded', () => {
             document.cookie = "collection="+ cukie + "; expires=" + expirationDate.toUTCString() + "; path=/";
             window.location.href = "../plante/plante.html";
         });
+        
         form.reset();
+        desc.appendChild(button);
     });
+
     
     function getCookie(name) {
         var cookieArr = document.cookie.split(';');
@@ -269,5 +281,51 @@ document.addEventListener('DOMContentLoaded', () => {
         }).join(''));
 
         return JSON.parse(jsonPayload);
+    }
+    function get_Eng(cuvant) {
+        if (cuvant === "rosu")
+            return "red";
+        if (cuvant === "galben")
+            return "yellow";
+        if (cuvant === "albastru")
+            return "blue";
+        if (cuvant === "portocaliu")
+            return "orange";
+        if (cuvant === "verde")
+            return "green";
+        if (cuvant === "alba")
+            return "white";
+        if (cuvant === "roz")
+            return "pink";
+        if (cuvant === "lila")
+            return "purple";
+        if (cuvant === "medicinala")
+            return "medicinal";
+        if (cuvant === "feriga")
+            return "fig";
+        if (cuvant === "carnivor")
+            return "carnivorous";
+        if (cuvant === "suculent")
+            return "succulent";
+        if (cuvant === "aromatice")
+            return "aromatic";
+        if (cuvant === "montana")
+            return "mountain";
+        if (cuvant === "ecuatoriala")
+            return "equator";
+        if (cuvant === "mlastina")
+            return "swamp";
+        if (cuvant === "deset")
+            return "desert";
+        if (cuvant === "jungla")
+            return "jungle";
+        if (cuvant === "primavara")
+            return "spring";
+        if (cuvant === "vara")
+            return "summer";
+        if (cuvant === "toamna")
+            return "autumn";
+        if (cuvant === "iarna")
+            return "winter";
     }
 });

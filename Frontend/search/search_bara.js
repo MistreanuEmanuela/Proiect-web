@@ -110,10 +110,11 @@ fetch(`/Proiect/Backend/Controllers/CollectionController.php/filtru/culoare?culo
     .catch(error => {
         console.error('Error:', error);
     });
-colorGen=localStorage.getItem("colorGen");
-anotimpGen=localStorage.getItem("anotimpGen");
-tipGen=localStorage.getItem("tipGen");
-regiuneGen=localStorage.getItem("regiuneGen");
+
+        colorGen=localStorage.getItem("colorGen");
+        anotimpGen=localStorage.getItem("anotimpGen");
+        tipGen=localStorage.getItem("tipGen");
+        regiuneGen=localStorage.getItem("regiuneGen");
 document.getElementById('but').addEventListener('click',function(){
         var cukie = {
             color: colorGen,

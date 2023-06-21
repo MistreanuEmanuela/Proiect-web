@@ -19,19 +19,6 @@ body{
     display: flex;
     flex-direction: row;
 }
-.but
-{
-    font-style:italic;
-    background-color: #41b267cb;
-    color: white;
-    margin-left:0%;
-    border-radius: 10px;
-    font-size: 2vi;
-}
-.but:hover
-{
-    color:black;
-}
 .logoBig
 {   
     font-family: inherit;
@@ -191,6 +178,7 @@ form button
 {
     display: flex;
     flex-direction: row;
+
 }
 
 .plante .result form
@@ -419,6 +407,11 @@ form button
     width: 150px;
     height: 200px;
 }
+.plante .result .containerPlante .colectie .descriereColectie
+{
+    font-size: 3vw;
+    margin-top: 5%;
+}
     }
     @media screen and (max-width: 800px) and (min-width:650px) {
         .plante .result
@@ -434,7 +427,6 @@ form button
         {
             text-align:center;
             flex-direction: row;
-            flex-wrap:wrap;
         }
         .plante .result form .filt label
         { 
@@ -503,3 +495,17 @@ form button
       
         }
     }
+    .but
+{
+    
+    font-style:italic;
+    background-color: #41b267cb;
+    color: white;
+    margin-left:20%;
+    border-radius: 10px;
+    font-size: 2vi;
+}
+.but:hover
+{
+    color:black;
+}

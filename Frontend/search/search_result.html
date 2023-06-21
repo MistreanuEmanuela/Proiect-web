@@ -40,45 +40,48 @@
         <div class="text"> HeMa</div>
     </div>
 
-<div class="plante"><div class="desc"> Rezultatele cautarii plante:  
+<div class="plante"> <div class="desc" id="desc"> Rezultatele cautarii plante:  
     <span id="color"></span>
     <span id="anotimp"></span>
     <span id="inaltime"></span>
     <span id="regiune"></span>
+    <button class="but" id='but'>Generate one</button>
 </div>
+
+
 <div class="result">
 <form class="formular"> 
    
 <div class="filt">
     <div class="filtru">Culoare:</div>
     
-    <label><input type="radio" name="color" value="rosu" id='red'>rosu</label>
-    <label><input type="radio" name="color" value="galben" id='yellow'>galben</label>
-    <label><input type="radio" name="color" value="albastru" id='blue'>albastru</label>
-    <label><input type="radio" name="color" value="portocalie" id='orange'>portocalie</label>
-    <label><input type="radio" name="color" value="verde" id='green'>verde</label>
-    <label><input type="radio" name="color" value="alba" id='white'>alba</label>
-    <label><input type="radio" name="color" value="roz" id='pink'>roz</label>
-    <label><input type="radio" name="color" value="lila" id='purple'>lila</label>
+    <label><input type="radio" name="color" value="rosu">rosu</label>
+    <label><input type="radio" name="color" value="galben">galben</label>
+    <label><input type="radio" name="color" value="albastru">albastru</label>
+    <label><input type="radio" name="color" value="portocalie">portocalie</label>
+    <label><input type="radio" name="color" value="verde">verde</label>
+    <label><input type="radio" name="color" value="alba">alba</label>
+    <label><input type="radio" name="color" value="roz">roz</label>
+    <label><input type="radio" name="color" value="lila">lila</label>
 </div>
 
 <div class="filt">
     <div class="filtru">Tipul plantei:</div>
     
-    <label><input type="radio" name="tip" value="medicinala" id='medicinal'>medicinala</label>
-    <label><input type="radio" name="tip" value="feriga" id='fig'>feriga</label>
-    <label><input type="radio" name="tip" value="carnivor" id='carnivorous'>carnivora</label>
-    <label><input type="radio" name="tip" value="suculent" id='succulent'>suculenta</label>
-    <label><input type="radio" name="tip" value="aromatice" id='aromatic'>aromatice</label>
+    <label><input type="radio" name="tip" value="medicinala">medicinala</label>
+    <label><input type="radio" name="tip" value="feriga">feriga</label>
+    <label><input type="radio" name="tip" value="carnivor">carnivora</label>
+    <label><input type="radio" name="tip" value="suculent">suculenta</label>
+    <label><input type="radio" name="tip" value="aromatice">aromatice</label>
   </div>
   <div class="filt">
     <div class="filtru">Zona: </div>
 
-    <label><input type="radio" name="zona" value="montana" id='mountain'>montana</label>
-    <label><input type="radio" name="zona" value="ecuatoriala" id='equator'>ecuatoriala </label>
-    <label><input type="radio" name="zona" value="mlastina" id='swamp'>mlastina </label>
-    <label><input type="radio" name="zona" value="desertica" id='desert'>desertica </label>
-    <label><input type="radio" name="zona" value="jungla" id='jungle'>jungla </label>
+    <label><input type="radio" name="zona" value="montana">montana</label>
+    <label><input type="radio" name="zona" value="ecuatoriala">ecuatoriala </label>
+    <label><input type="radio" name="zona" value="mlastina">mlastina </label>
+    <label><input type="radio" name="zona" value="desertica">desertica </label>
+    <label><input type="radio" name="zona" value="jungla">jungla </label>
 </div>
 
 
@@ -94,8 +97,8 @@
 
     <button type="submit" > Filtreaza</button>
 </form>
-<div class="containerPlante" id="containerPlante"> </div>
-<button class="but" id='but'>Generate one</button>
+<div class="containerPlante" id="containerPlante"> 
+</div>
     </div>
 </div>
 </body>
