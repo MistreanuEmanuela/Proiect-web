@@ -1,6 +1,7 @@
 <?php
 include_once("Config.php");
 include_once("StatsService.php");
+include_once("../Entities/Collection.php");
 class CollectionService
 {
     private $CONFIG;
@@ -32,9 +33,13 @@ class CollectionService
     }
     public function createCollection($name, $desc, $userId)
     {
+        $coll= new Collection(0,$name,$userId,0,$desc);
+        $coll_name=$coll->getName();
+        $coll_userId=$coll->getUserId();
+        $coll_desc=$coll->getDescription();
         $query = "INSERT INTO collections (name, userId,description) VALUES (?, ?,?)";
         $statement = $this->Db->prepare($query);
-        $statement->bind_param("sss", $name, $userId, $desc);
+        $statement->bind_param("sss", $coll_name, $coll_userId, $coll_desc);
         if ($statement->execute()) {
             $collectionId = $this->Db->insert_id;
             $response = array(
@@ -286,7 +291,6 @@ class CollectionService
                 $response['body'] = json_encode($raspuns);
 
             } else {
-                // User not found
                 $response['status_code_header'] = 'HTTP/1.1 404 Not Found';
                 $response['content_type_header'] = 'Content-Type: application/json';
                 $response['body'] = json_encode(['message' => 'User not found']);

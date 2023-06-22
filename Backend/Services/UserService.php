@@ -220,6 +220,7 @@ class UserService
             echo "Missing required form data";
         }
     }
+    
     public function getUserByUsername()
     {
         $requestData = json_decode(file_get_contents('php://input'), true);
@@ -256,6 +257,7 @@ class UserService
         header($response['content_type_header']);
         echo $response['body'];
     }
+    
     public function getTop3ByCollections()
     {
         try {

@@ -1,5 +1,6 @@
 <?php
 include_once ("Config.php");
+include_once("../Entities/CollectionTag.php");
 class tagService
 {
     private $CONFIG;
@@ -48,7 +49,7 @@ class tagService
         } else {
             $query = "INSERT INTO collectiontags (collectionId, tag) VALUES (?, ?)";
             $statement = $this->Db->prepare($query);
-            $statement->bind_param("ss", $collectionId, $tag);
+            $statement->bind_param("ss", $collectionId,  $tag);
             if ($statement->execute()) {
                 $response = array(
                     'collectionId' => $collectionId,
