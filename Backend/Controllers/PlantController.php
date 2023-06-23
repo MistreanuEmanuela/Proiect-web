@@ -4,6 +4,7 @@ require_once('../Services/vendor/autoload.php');
 
 include_once "../Services/PlantService.php";
 include_once "../Services/TokenService.php";
+include_once("../Services/StatsService.php");
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     header('Access-Control-Allow-Origin: *');
     header('Access-Control-Allow-Methods: POST, GET, DELETE, PUT, PATCH, OPTIONS');
@@ -20,7 +21,6 @@ $requestMethod = $_SERVER["REQUEST_METHOD"];
 $auth = new TokenService();
 
 $service = new PlantService();
-file_put_contents('./log.txt', $requestMethod, FILE_APPEND);
 switch ($uri[5]) {
     case "planta":
         $jwt = $auth->checkJWTExistance();
@@ -34,7 +34,12 @@ switch ($uri[5]) {
             $type = $_POST['type'];
             $zona = $_POST['zona'];
             $anotimp = $_POST['anotimp'];
-            $service->createPlant($name, $desc, $file, $collectionId, $color, $type, $zona, $anotimp);
+            $response = $service->createPlant($name, $desc, $file, $collectionId, $color, $type, $zona, $anotimp);
+            if(http_response_code()==200){
+                $stats = new StatsService();
+                $stats->incPlants();
+            }
+            echo $response;
         } else {
             header("HTTP/1.1 405 Method Not Allowed");
             exit();
@@ -61,7 +66,6 @@ switch ($uri[5]) {
     case 'info':
         $jwt = $auth->checkJWTExistance();
         $auth->validateJWT($jwt);
-        file_put_contents('./log.txt', $requestMethod, FILE_APPEND);
         switch ($requestMethod) {
             case 'GET':
                 $requestType = $uri[6];
@@ -80,7 +84,6 @@ switch ($uri[5]) {
                     $service->notFoundResponse();
                 break;
             case 'PUT':
-                file_put_contents('./log.txt', "hi", FILE_APPEND);
                 $service->IncViewCount();
                 break;
             default:

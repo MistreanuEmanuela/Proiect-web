@@ -10,6 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 header('Access-Control-Allow-Origin: *');
 include_once("../Services/TokenService.php");
 include_once "../Services/UserService.php";
+include_once("../Services/StatsService.php");
 
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $uri = explode('/', $uri);
@@ -22,6 +23,11 @@ switch ($uri[5]) {
                 switch ($requestMethod) {
                         case 'POST':
                                 $response = $service->login();
+                                if($response['status_code_header']=="HTTP/1.1 200 OK"){
+                                        $token = new TokenService();
+                                        $jwt = $token->generateJWT($response['body']);
+                                        $response['body'] = json_encode(['token' => $jwt]);
+                                }
                                 header($response['status_code_header']);
                                 header($response['content_type_header']);
                                 if ($response['body']) {
@@ -55,7 +61,12 @@ switch ($uri[5]) {
         case 'inregistrare':
                 switch ($requestMethod) {
                         case 'POST':
-                                $service->createUserFromFormData();
+                                $response = $service->createUserFromFormData();
+                                if($response=="User created"){
+                                        $stats = new StatsService();
+                                        $stats->incUsers();
+                                }
+                                echo $response;
                                 break;
                         default:
                                 $service->notFoundResponse();

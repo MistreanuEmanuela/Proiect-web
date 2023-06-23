@@ -3,6 +3,7 @@
 require_once('../Services/vendor/autoload.php');
 
 include_once "../Services/CollectionService.php";
+include_once "../Services/StatsService.php";
 include_once "../Services/TokenService.php";
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     header('Access-Control-Allow-Origin: *');
@@ -30,7 +31,12 @@ switch ($uri[5]) {
             $name = $data['name'];
             $desc = $data['desc'];
             $userId = $data['userId'];
-            $service->createCollection($name, $desc, $userId);
+            $response = $service->createCollection($name, $desc, $userId);
+            if(http_response_code()==200){
+                $stats = new StatsService();
+                $stats->incCollections();
+            }
+            echo $response;
         } else {
             header("HTTP/1.1 405 Method Not Allowed");
             exit();
