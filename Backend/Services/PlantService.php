@@ -93,7 +93,7 @@ class PlantService
             } else {
                 $response['status_code_header'] = 'HTTP/1.1 404 Not Found';
                 $response['content_type_header'] = 'Content-Type: application/json';
-                $response['body'] = json_encode(['message' => 'User not found']);
+                $response['body'] = json_encode(['message' => 'Planta not found']);
             }
         } catch (PDOException $e) {
             $response['status_code_header'] = 'HTTP/1.1 500 Internal Server Error';
@@ -191,7 +191,7 @@ class PlantService
             } else {
                 $response['status_code_header'] = 'HTTP/1.1 404 Not Found';
                 $response['content_type_header'] = 'Content-Type: application/json';
-                $response['body'] = json_encode(['message' => 'User not found']);
+                $response['body'] = json_encode(['message' => 'Planta not found']);
             }
         } catch (PDOException $e) {
             $response['status_code_header'] = 'HTTP/1.1 500 Internal Server Error';
@@ -321,7 +321,7 @@ class PlantService
             } else {
                 $response['status_code_header'] = 'HTTP/1.1 404 Not Found';
                 $response['content_type_header'] = 'Content-Type: application/json';
-                $response['body'] = json_encode(['message' => 'Collection not found']);
+                $response['body'] = json_encode(['message' => 'Plant not found']);
             }
             header($response['status_code_header']);
             header($response['content_type_header']);
@@ -387,7 +387,7 @@ class PlantService
             } else {
                 $response['status_code_header'] = 'HTTP/1.1 404 Not Found';
                 $response['content_type_header'] = 'Content-Type: application/json';
-                $response['body'] = json_encode(['message' => 'Collection not found']);
+                $response['body'] = json_encode(['message' => 'Planta not found']);
             }
             header($response['status_code_header']);
             header($response['content_type_header']);

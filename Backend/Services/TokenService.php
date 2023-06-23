@@ -49,7 +49,7 @@ class TokenService
         }
 
         public function checkJWTExistance () {
-            // Check JWT
+
             if (! preg_match('/Bearer\s(\S+)/', $this -> getAuthorizationHeader(), $matches)) {
                 header('HTTP/1.0 400 Bad Request');
                 echo 'Token not found in request';

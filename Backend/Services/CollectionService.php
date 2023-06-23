@@ -108,6 +108,7 @@ class CollectionService
         $a = $_GET['anotimp'];
         $r = $_GET['regiune'];
         $i = $_GET['tip'];
+        $statement=null;
         try {
 
             if ($c !== 'c' && $a !== 'a' && $r !== 'r' && $i !== 'i') {
@@ -265,6 +266,7 @@ class CollectionService
                 $statement->bind_param("s", $i);
 
             }
+            if($statement){
             $statement->execute();
             $result = $statement->get_result();
             $raspuns = array();
@@ -293,11 +295,14 @@ class CollectionService
             } else {
                 $response['status_code_header'] = 'HTTP/1.1 404 Not Found';
                 $response['content_type_header'] = 'Content-Type: application/json';
-                $response['body'] = json_encode(['message' => 'User not found']);
+                $response['body'] = json_encode(['message' => 'Collection not found']);
             }
+        
             header($response['status_code_header']);
             header($response['content_type_header']);
             echo $response['body'];
+        }
+        
         } catch (PDOException $e) {
             $response['status_code_header'] = 'HTTP/1.1 500 Internal Server Error';
             $response['content_type_header'] = 'Content-Type: application/json';
