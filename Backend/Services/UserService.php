@@ -3,7 +3,7 @@
 include_once("../Entities/User.php");
 include_once("Config.php");
 include_once("../Services/TokenService.php");
-include_once("StatsService.php");
+
 class UserService
 {
     private $CONFIG;
@@ -66,11 +66,10 @@ class UserService
         $password = $_POST['password'];
         $user = $this->getUserBySignInfo($username, $password);
         if ($user) {
-            $token = new TokenService();
-            $jwt = $token->generateJWT($user);
+            file_put_contents('./log.txt',$user,FILE_APPEND);
             $response['status_code_header'] = 'HTTP/1.1 200 OK';
             $response['content_type_header'] = 'Content-Type: application/json';
-            $response['body'] = json_encode(['token' => $jwt]);
+            $response['body'] = $user;
         } else {
             $response['status_code_header'] = 'HTTP/1.1 404 Not found';
             $response['content_type_header'] = 'Content-Type: application/json';
@@ -181,19 +180,14 @@ class UserService
             $email = $user->getEmail();
             $firstName = $user->getFirstName();
             $lastName = $user->getLastName();
-
-
             if ($username !== null) {
                 $statement = $this->Db->prepare("INSERT INTO users (username, password, email, firstName, lastName) VALUES (?, ?, ?, ?, ?)");
                 $statement->bind_param("sssss", $username, $password, $email, $firstName, $lastName);
                 $statement->execute();
                 $statement->close();
-
-                $stats = new StatsService();
-                $stats->incUsers();
-                echo "User created";
+                return "User created";
             } else {
-                echo "Username cannot be null";
+                return "Username cannot be null";
             }
         } catch (PDOException $e) {
             trigger_error("Error in " . __METHOD__ . ": " . $e->getMessage(), E_USER_ERROR);
@@ -204,7 +198,7 @@ class UserService
         $data = json_decode(file_get_contents('php://input'), true);
         echo '<pre>';
         print_r($data);
-        echo '</pre>';
+        echo '</pre>'; 
         if (isset($data['username']) && isset($data['password']) && isset($data['email']) && isset($data['firstName']) && isset($data['lastName'])) {
             $user = new User(
                 0,
@@ -215,7 +209,7 @@ class UserService
                 $data['lastName']
             );
 
-            $this->createUser($user);
+            return $this->createUser($user);
         } else {
             echo "Missing required form data";
         }

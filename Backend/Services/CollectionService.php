@@ -1,6 +1,5 @@
 <?php
 include_once("Config.php");
-include_once("StatsService.php");
 include_once("../Entities/Collection.php");
 class CollectionService
 {
@@ -49,9 +48,7 @@ class CollectionService
             $jsonResponse = json_encode($response);
             header('Content-Type: application/json');
             http_response_code(200);
-            echo $jsonResponse;
-            $stats = new StatsService();
-            $stats->incCollections();
+            return $jsonResponse;
         } else {
             header('Content-Type: application/json');
             http_response_code(500);
@@ -60,7 +57,7 @@ class CollectionService
                 'message' => 'Failed to create a new collection'
             );
 
-            echo json_encode($errorResponse);
+            return json_encode($errorResponse);
         }
     }
     public function getCollectionsByUserId()

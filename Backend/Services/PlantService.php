@@ -1,6 +1,5 @@
 <?php
 include_once("Config.php");
-include_once("StatsService.php");
 class PlantService
 {
     private $CONFIG;
@@ -51,20 +50,17 @@ class PlantService
                 'plantId' => $plantId,
                 'message' => 'New plant created successfully'
             );
-            $stats = new StatsService();
-            $stats->incPlants();
-
             $jsonResponse = json_encode($response);
             header('Content-Type: application/json');
             http_response_code(200);
-            echo $jsonResponse;
+            return $jsonResponse;
         } else {
             header('Content-Type: application/json');
             http_response_code(500);
             $errorResponse = array(
                 'message' => 'Failed to create a new plant'
             );
-            echo json_encode($errorResponse);
+            return json_encode($errorResponse);
         }
     }
     public function getPlantsByCollectionId()

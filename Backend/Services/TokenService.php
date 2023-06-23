@@ -16,7 +16,6 @@ class TokenService
     }
     public function generateJWT($user)
         {
-
             $secret_Key = $this->secret_Key;
             $date = new DateTimeImmutable();
             $expire_at = $date->modify('+1 day')->getTimestamp();
