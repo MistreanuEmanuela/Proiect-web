@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         var colorGen = document.querySelector('input[name="color"]:checked');
         var anotimpGen = document.querySelector('input[name="anotimp"]:checked');
         var tipGen = document.querySelector('input[name="tip"]:checked');
-        var regiuneGen = document.querySelector('input[name="regiune"]:checked');
+        var regiuneGen = document.querySelector('input[name="zona"]:checked');
 
         color = colorGen ? colorGen.value : "c";
         anotimp = anotimpGen ? anotimpGen.value : "a";

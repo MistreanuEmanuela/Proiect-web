@@ -78,24 +78,21 @@ else
             },
             body: JSON.stringify(user),
           })
-            .catch(error => {
-              console.error('Error:', error);
-            });
+          .catch(error => {
+            console.error('Error:', error);
+          });
+          console.log('User not found');
+          window.location.href = "../sign/sign.html"; 
           }
+
           else {
             errors.push('This username already exists. Please choose another one.');
             var errorContainer = document.getElementById('error-container');
             errorContainer.innerText = errors[0];
           }
-        } 
-        else {
-          console.log('User not found');
-          window.location.href = "../sign/sign.html";     
-        }
+      }
       })
-      .catch(error => {
-        console.error('Error:', error);
-      });
+
     }
 }); 
 });

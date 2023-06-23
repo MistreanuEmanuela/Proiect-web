@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const deleteButton = document.createElement('button');
     deleteButton.className = 'deletebut';
     deleteButton.id = 'delete';
-    deleteButton.textContent = 'Delete Plant';
+    deleteButton.textContent = 'Sterge planta';
     deleteButton.addEventListener('click', deletePlant);
     di.appendChild(deleteButton);
 
