@@ -1,3 +1,3 @@
-# Proiect-web
+# HeMa App
 # Mistreanu Emanuela
 # Vlad Adriana
